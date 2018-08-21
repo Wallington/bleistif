@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+*   Author: Sean O'Brien
+*   Create Date: 08/20/2018
+*   Modifly Date: 08/20/2018
+*   Discription: This where going host all our custom rules and modifcation to Google Material API to make more out the box API
+*/
+@import url('https://fonts.googleapis.com/css?family=Exo+2:300,400,500');
+
+$font : 'Exo 2', sans-serif;
+
+$mainColor: rgba(66,164,245,1);
+$secondaryColor : rgba(255,171,55,1);
+
+body
+{
+    font: 100% $font;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#log
+{
+    width: 100%;
+    justify-content: center;
+    
+    text-align: center;
+}
+#log > h1
+{
+    position: relative;
+    top: -60px;
+}
+
+#log > svg
+{
+    background-image: url('./assets/images/pencil.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(45deg);
+    background-size: 150px;
+    width: 150px;
+    height: 150px;
+    padding-top: 80px;
+
+}
