@@ -43,5 +43,7 @@ export class MainComponent
           navButtonElem.className = "mat-icon-button";
       }, 200);
     }
+
+    
     
 }

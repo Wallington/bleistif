@@ -26,6 +26,33 @@ html, body
     overflow: hidden;
 }
 
+//define fx class
+.column
+{
+    display: flex;
+    flex-direction: column;
+}
+.row
+{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.fx-50
+{
+    width: 50%;
+}
+
+.fx-flex-end
+{
+    justify-content: flex-end;
+}
+.fx-flex-start
+{
+    justify-content: flex-start;
+}
+
+
 //backlayer css
 
 #backLayer
@@ -130,6 +157,20 @@ html, body
 
 }
 
+.shoppingCartTabContainer
+{
+    height: 55px;
+    line-height: 55px;
+}
+.shoppingCartTabCorner
+{
+    height: 55px;
+    width: 55px;
+    background-color: $secondaryColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 //all animation
 @keyframes OpenDropDownNav
@@ -190,11 +231,18 @@ html, body
         position: absolute;
         top: 60px;
         background-color: rgba(255,255,255,.85);
-        min-height: 90vh;
-        -webkit-clip-path: polygon(6% 0, 0 5%, 0% 100%, 100% 100%, 100% 0%);
-        clip-path: polygon(6% 0, 0 5%, 0% 100%, 100% 100%, 100% 0%);
-       
+        min-height: 100vh;
         padding-bottom: 75px;
+    }
+    main > section#mobile
+    {
+        position: sticky;
+        top: calc(100vh - 56px);
+        height: 56px;
+        padding-left: 16px;
+        line-height: 56px;
+        background-color: rgba(66,164,245,.85);
+        box-shadow: 0px -1.5px 0px 0px rgba(0, 0, 0, 0.26);
     }
 }
 
@@ -226,10 +274,17 @@ html, body
         top: 60px;
         background-color: rgba(255,255,255,.85);
         min-height: 90vh;
-        -webkit-clip-path: polygon(6% 0, 0 5%, 0% 100%, 100% 100%, 100% 0%);
-        clip-path: polygon(6% 0, 0 5%, 0% 100%, 100% 100%, 100% 0%);
-       
         padding-bottom: 75px;
+    }
+    main > section#mobile
+    {
+        position: sticky;
+        top: calc(100vh - 56px);
+        height: 56px;
+        padding-left: 16px;
+        line-height: 56px;
+        background-color: rgba(66,164,245,.85);
+        box-shadow: 0px -1.5px 0px 0px rgba(0, 0, 0, 0.26);
     }
 }
 
@@ -242,12 +297,32 @@ html, body
     #mediumSizeLayer
     {
         display: block;
+        height: 100vh;
     }
 
     //hidding the not need ui for other sizes
     #backLayer
     {
         display: none;
+    }
+    main
+    {
+        width: 100%;
+        position: absolute;
+        top: 130px;
+        background-color: rgba(255,255,255,.85);
+        min-height: 90vh;       
+        padding-bottom: 75px;
+    }
+    main > section#mobile
+    {
+        position: sticky;
+        background-color: rgba(66,164,245,.85);
+        box-shadow: 5px 0 2px 0 rgba(0,0,0, .26);
+        top: calc(100vh - 56px);
+        height: 56px;
+        padding-left: 16px;
+        line-height: 56px;
     }
 }
 
@@ -257,8 +332,29 @@ html, body
 @media only screen and (min-width: 1080px )
 {
     //hidding the not need ui for other sizes
-    #backLayer, #mediumSizeLayer
+    #backLayer, #mediumSizeLayer, section#mobile
     {
         display: none;
     }
+    main
+    {
+        background-color: $mainColor;
+        height: 100vh;
+        display: flex;
+        width: 100%;
+        
+    }
+    article
+    {
+        flex: 80%;
+        background-color: rgba(255,255,255,.85);
+    }
+    main > nav
+    {
+        flex: 20%;
+        background-color: $mainColor;
+    }
+
+    
+    
 }
