@@ -1,23 +1,108 @@
 /*
 *   Author: Sean O'Brien
 *   Create Date: 08/20/2018
-*   Modifly Date: 08/20/2018
+*   Modifly Date: 08/21/2018
 *   Discription: This where going host all our custom rules and modifcation to Google Material API to make more out the box API
 */
 @import url('https://fonts.googleapis.com/css?family=Exo+2:300,400,500');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-$font : 'Exo 2', sans-serif;
+$font : 'Exo 2','Roboto', sans-serif;
 
 $mainColor: rgba(66,164,245,1);
 $secondaryColor : rgba(255,171,55,1);
 
-body
+/*
+*   modifcation to Materal 
+*/
+@import 'theme';
+
+
+html, body
 {
-    font: 100% $font;
     width: 100%;
     height: 100%;
     margin: 0;
+    overflow: hidden;
 }
+
+//backlayer css
+
+#backLayer
+{
+    background-color: $mainColor;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+#backLayer > mat-toolbar > svg
+{
+    background-image: url('./assets/images/pencil.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(45deg);
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+}
+
+#backLayer > mat-nav-list > mat-list-item.active
+{
+    background-color: $secondaryColor;
+}
+
+// Medium Size Nav and title aka mediumSizeLayer
+#mediumSizeLayer
+{
+    padding-bottom: 40px;
+    background-color: $mainColor
+}
+
+.open
+{
+    animation-name: OpenDropDownNav;
+    animation-duration: 200ms;
+    animation-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
+}
+.close
+{
+    animation-name: CloseDropDownNav;
+    animation-duration: 300ms;
+    animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+.iconRotate
+{
+    animation-name: IconRotate;
+    animation-duration: 200ms;
+    animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+#mediumSizeLayer > mat-toolbar > mat-toolbar-row > svg
+{
+    background-image: url('./assets/images/pencil.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(45deg);
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+}
+#mediumSizeLayer > mat-toolbar > mat-toolbar-row > nav.mat-tab-nav-bar
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#mediumSizeLayer > mat-toolbar > mat-toolbar-row > nav.mat-tab-nav-bar > div.mat-tab-links > a.mat-tab-link
+{
+    padding-left: 12px;
+    padding-right: 12px;
+    min-width: 100px;
+}
+
+
+
+//css for log in
+
 
 #log
 {
@@ -38,9 +123,142 @@ body
     background-position: center;
     background-repeat: no-repeat;
     transform: rotate(45deg);
-    background-size: 150px;
+    background-size: 100px;
     width: 150px;
     height: 150px;
     padding-top: 80px;
 
+}
+
+
+//all animation
+@keyframes OpenDropDownNav
+{
+    from
+    {
+        top: 60px;
+    }
+    to
+    {
+        top: 400px;
+    }
+}
+@keyframes CloseDropDownNav
+{
+    from
+    {
+        top: 400px;
+    }
+    to
+    {
+        top: 60px;
+    }
+}
+@keyframes IconRotate
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to
+    {
+        transform: rotate(180deg);
+    }
+}
+
+/*************************************
+*    X-SMALL
+**************************************/
+@media only screen and (max-width: 449.25px)
+{
+    #backLayer
+    {
+        display: block;
+    }
+    //hidding the not need ui for other sizes
+    #mediumSizeLayer
+    {
+        display: none;
+    }
+    #nav
+    {
+        opacity: 0;
+    }
+    main
+    {
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        background-color: rgba(255,255,255,.85);
+        min-height: 90vh;
+        -webkit-clip-path: polygon(6% 0, 0 5%, 0% 100%, 100% 100%, 100% 0%);
+        clip-path: polygon(6% 0, 0 5%, 0% 100%, 100% 100%, 100% 0%);
+       
+        padding-bottom: 75px;
+    }
+}
+
+/**************************************
+*   SMALL
+**************************************/
+@media only screen and (min-width: 450px ) and (max-width: 767.25px)
+{
+
+    #backLayer
+    {
+        display: block;
+    }
+    //hidding the not need ui for other sizes
+    #mediumSizeLayer
+    {
+        display: none;
+    }
+
+    #nav 
+    {
+        opacity: 0;
+    }
+
+    main
+    {
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        background-color: rgba(255,255,255,.85);
+        min-height: 90vh;
+        -webkit-clip-path: polygon(6% 0, 0 5%, 0% 100%, 100% 100%, 100% 0%);
+        clip-path: polygon(6% 0, 0 5%, 0% 100%, 100% 100%, 100% 0%);
+       
+        padding-bottom: 75px;
+    }
+}
+
+/**************************************
+*   Medium
+**************************************/
+@media only screen and (min-width: 768px ) and (max-width: 1079.25px)
+{
+    
+    #mediumSizeLayer
+    {
+        display: block;
+    }
+
+    //hidding the not need ui for other sizes
+    #backLayer
+    {
+        display: none;
+    }
+}
+
+/**************************************
+*   Large
+**************************************/
+@media only screen and (min-width: 1080px )
+{
+    //hidding the not need ui for other sizes
+    #backLayer, #mediumSizeLayer
+    {
+        display: none;
+    }
 }

@@ -3,13 +3,39 @@
     Create Date: 08/20/2018
     Modifity Date: 08/20/2018
 -->
-<div id="log">
-    <svg></svg>
-    <h1>Bleistift</h1>
-</div>
-<h1>Headline 1</h1>
-<h2>Headline 2</h2>
-<h3>Headline 3</h3>
-<h4>Headline 4</h4>
-<h5>Headline 5</h5>
-<h6>Headline 6</h6>
+<section id="backLayer">
+    <mat-toolbar color="primary">
+        <button id="navButton" mat-icon-button (click)="TogglePhoneMenu()"><i id="navIcon" class="fas fa-bars"></i></button>
+        <svg></svg>
+        <h6>Bleistift</h6>
+    </mat-toolbar>
+    <mat-nav-list id="nav">
+        <mat-list-item *ngFor="let link of links; let i = index" >
+            <mat-divider *ngIf="i == 5"></mat-divider>
+            <a matLine href="#">{{link}}</a>
+        </mat-list-item>
+    </mat-nav-list>
+</section>
+<section id="mediumSizeLayer">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <svg></svg>
+            <h6>Bleistift</h6>
+        </mat-toolbar-row>
+        <mat-toolbar-row>
+            <nav mat-tab-nav-bar >
+                <a mat-tab-link *ngFor="let link of links">
+                    {{link}}
+                </a>
+            </nav>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</section>
+<main id="main">
+    <section>
+
+    </section>
+    <article >
+
+    </article>
+</main>

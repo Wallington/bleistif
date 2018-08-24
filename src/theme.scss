@@ -1,0 +1,83 @@
+@import '~@angular/material/theming';
+$customTypography: mat-typography-config(
+    $font-family: $font
+);
+@include angular-material-typography($customTypography);
+@include mat-core();
+
+$blestiftPrimaryThemeColor:
+(
+    50: #C9E5FC,
+    100: #AED8FA,
+    200: #93CBF9,
+    300: #78BEF7,
+    400: #5DB1F6,
+    500: #42a4f5,
+    600: #388CD2,
+    700: #2F75AF,
+    800: #255D8C,
+    900: #1C4669,
+    A100: #42CEF5,
+    A200: #42B9F5,
+    A400: #428EF5,
+    A700: #4279F5,
+    contrast: 
+    (
+        50: $black-87-opacity,
+        100: $black-87-opacity,
+        200: $black-87-opacity,
+        300: $black-87-opacity,
+        400: $black-87-opacity,
+        500: $black-87-opacity,
+        600: $black-87-opacity,
+        700: $black-87-opacity,
+        800: $white-87-opacity,
+        900: $white-87-opacity,
+        A100: $black-87-opacity,
+        A200: $black-87-opacity,
+        A400: $black-87-opacity,
+        A700: $black-87-opacity,
+  )
+);
+$blestiftSecondaryThemeColor:
+(
+    50: #FFE7C5,
+    100: #FFDBA9,
+    200: #FFCF8C,
+    300: #FFC370,
+    400: #FFB753,
+    500: #FFAB37,
+    600: #DA922F,
+    700: #B67A27,
+    800: #91611F,
+    900: #6D4917,
+    A100: #FFDB37,
+    A200: #FFC337,
+    A400: #FF9337,
+    A700: #FF7B37,
+    contrast: 
+    (
+        50: $black-87-opacity,
+        100: $black-87-opacity,
+        200: $black-87-opacity,
+        300: $black-87-opacity,
+        400: $black-87-opacity,
+        500: $black-87-opacity,
+        600: $black-87-opacity,
+        700: $black-87-opacity,
+        800: $white-87-opacity,
+        900: $white-87-opacity,
+        A100: $black-87-opacity,
+        A200: $black-87-opacity,
+        A400: $black-87-opacity,
+        A700: $black-87-opacity,
+  )
+);
+
+$custom-theme-primary: mat-palette($blestiftPrimaryThemeColor);
+$custom-theme-accent: mat-palette($blestiftSecondaryThemeColor);
+$custom-theme-warn: mat-palette($mat-red);
+
+$custome-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
+
+@include angular-material-theme($custome-theme);
