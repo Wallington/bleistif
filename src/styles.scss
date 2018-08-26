@@ -1,21 +1,19 @@
 /*
 *   Author: Sean O'Brien
 *   Create Date: 08/20/2018
-*   Modifly Date: 08/21/2018
+*   Modifly Date: 08/25/2018
 *   Discription: This where going host all our custom rules and modifcation to Google Material API to make more out the box API
 */
-@import url('https://fonts.googleapis.com/css?family=Exo+2:300,400,500');
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/*
+*   modifcation to Materal 
+*/
 
-$font : 'Exo 2','Roboto', sans-serif;
+@import 'theme';
 
 $mainColor: rgba(66,164,245,1);
 $secondaryColor : rgba(255,171,55,1);
 
-/*
-*   modifcation to Materal 
-*/
-@import 'theme';
+
 
 
 html, body
@@ -41,6 +39,12 @@ html, body
 .fx-50
 {
     width: 50%;
+}
+
+.fx-auto
+{
+    display: flex;
+    flex: auto;
 }
 
 .fx-flex-end
@@ -172,6 +176,93 @@ html, body
     align-items: center;
 }
 
+#filter
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: $secondaryColor;
+}
+#filterContent
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    overflow-y: scroll;
+    background-color: rgba(255,255,255,.85);
+
+}
+#filterContent > mat-toolbar
+{
+    background-color: transparent !important;
+    position: static;
+    
+}
+#filterContent > mat-toolbar > mat-toolbar-row
+{
+    border-bottom:  1px solid rgba(0, 0, 0, 0.16);
+}
+#filterContent > mat-toolbar > mat-toolbar-row > h6
+{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+#filterContent > mat-toolbar > mat-toolbar-row > button
+{
+    
+    z-index: 5;
+}
+#filterContent > .group
+{
+    display: flex;
+    flex-direction: column;
+    border-bottom:  1px solid rgba(0, 0, 0, 0.16);
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+#filterContent > div.row
+{
+    padding-top: 9px;
+    padding-bottom: 9px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+#filterContent > div.row > button
+{
+    min-width: 350px;
+}
+mat-basic-chip
+{
+    height: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: .75px solid rgba(0, 0, 0, .12);
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 6px;
+    margin: 4px;
+    text-transform: uppercase;
+}
+mat-basic-chip.selected
+{
+    border: .75px solid $secondaryColor;
+    background-color: rgba(255,171,55,.25);
+    
+}
+mat-basic-chip:active, mat-basic-chip:hover
+{
+    background-color: rgba(255,171,55,.25);
+    cursor: pointer;
+}
+
 //all animation
 @keyframes OpenDropDownNav
 {
@@ -217,7 +308,7 @@ html, body
         display: block;
     }
     //hidding the not need ui for other sizes
-    #mediumSizeLayer
+    #mediumSizeLayer, section#pc, nav
     {
         display: none;
     }
@@ -257,7 +348,7 @@ html, body
         display: block;
     }
     //hidding the not need ui for other sizes
-    #mediumSizeLayer
+    #mediumSizeLayer,section#pc, nav
     {
         display: none;
     }
@@ -301,7 +392,7 @@ html, body
     }
 
     //hidding the not need ui for other sizes
-    #backLayer
+    #backLayer, section#pc, nav
     {
         display: none;
     }
@@ -348,13 +439,51 @@ html, body
     {
         flex: 80%;
         background-color: rgba(255,255,255,.85);
+        box-shadow: -2px 0px 2px 0px rgba(0, 0, 0, 0.26);
     }
     main > nav
     {
         flex: 20%;
         background-color: $mainColor;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
     }
+    nav > div.column > div > svg
+    {
+        background-image: url('./assets/images/pencil.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: rotate(45deg);
+        background-size: 40px;
+        width: 50px;
+        height: 50px;
+        padding-top: 180px;
 
+    }
+    nav > div.column > div > h1
+    {
+        position: relative;
+        top: -100px;
+    }
+    nav > div.column > mat-nav-list
+    {
+        position: relative;
+        top: -100px;
+    }
+    nav > div.column > mat-nav-list > mat-list-item.active
+    {
+        background-color: $secondaryColor;
+    }
+    main > section#pc > div.column
+    {
+        height: 99vh;
+        width: 56px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        align-items: center;
+    }
     
     
 }

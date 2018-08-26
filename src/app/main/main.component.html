@@ -7,7 +7,7 @@
     <mat-toolbar color="primary">
         <button id="navButton" mat-icon-button (click)="TogglePhoneMenu()"><i id="navIcon" class="fas fa-bars"></i></button>
         <svg></svg>
-        <h6>Bleistift</h6>
+        <h1>Bleistift</h1>
     </mat-toolbar>
     <mat-nav-list id="nav">
         <mat-list-item *ngFor="let link of links; let i = index" >
@@ -20,7 +20,7 @@
     <mat-toolbar color="primary">
         <mat-toolbar-row>
             <svg></svg>
-            <h6>Bleistift</h6>
+            <h4>Bleistift</h4>
         </mat-toolbar-row>
         <mat-toolbar-row>
             <nav mat-tab-nav-bar >
@@ -33,11 +33,44 @@
 </section>
 <main id="main">
     <nav>
-
+           <div class="column">
+                <div>
+                    <svg></svg>
+                </div>
+                <div>
+                   <h1>Bleistift</h1>
+               </div>
+           </div>
+           <div class="column">
+                <mat-nav-list>
+                    <mat-list-item *ngFor="let link of links;" >
+                        <mat-divider></mat-divider>
+                        <a matLine href="#">{{link}}</a>
+                    </mat-list-item>
+                </mat-nav-list>
+           </div>
     </nav>
     <article >
         
     </article>
+    <section id="pc">
+        <div class="column">
+            <div>
+                <button mat-icon-button><i class="fas fa-sliders-h"></i></button>
+            </div>
+            <span class="fx-auto"></span>
+            <div>
+                <div class="row shoppingCartTabContainer">
+                    <div class="shoppingCartTabCorner">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+                <div class="shoppingCartTabItems">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="mobile">
         <div class="row">
             <div class="fx-50" >
@@ -57,4 +90,6 @@
             </div>
         </div>
     </section>
+    
 </main>
+<app-filter></app-filter>

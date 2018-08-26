@@ -1,0 +1,121 @@
+<section id="filter">
+        <div id="filterContent">
+            <mat-toolbar>
+                <mat-toolbar-row>
+                        <button id="navButton" mat-icon-button ><i class="fas fa-times"></i></button>
+                        <h3>Filter</h3>
+                        <span class="fx-auto"></span>
+                        <i class="fas fa-sliders-h"></i> 
+                        
+                </mat-toolbar-row>
+            </mat-toolbar>
+            <div class="group">
+                <h4>Category</h4>
+            
+                <mat-chip-list>
+                    <mat-basic-chip [class.selected]="categoryQuery.graphite"  (click)="CategorySelection('graphite')">
+                        Graphite
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        Charcoal
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        Colored
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        Water Color
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        Accessory
+                    </mat-basic-chip>
+                </mat-chip-list>
+            </div>
+            <div class="group">
+                <div class="row">
+                    <h4>Price <b>$0.00 - {{maxLimit | currency}}</b></h4>
+                </div>
+                <mat-slider [(ngModel)]="maxLimit" [max]="200" [step]="10" [min]="0"></mat-slider>
+            </div>
+            <div class="group">
+                <h4>Set Size Range</h4>
+                <mat-chip-list>
+                    <mat-basic-chip>
+                        01
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        02
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        03
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        04
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        06
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        12
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        24
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        25+
+                    </mat-basic-chip>
+                </mat-chip-list>
+            </div>
+            <div class="group">
+                <h4>Core Material</h4>
+                <mat-chip-list>
+                    <mat-basic-chip>
+                        Soft
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        Medium
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        Hard
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        Mixed
+                    </mat-basic-chip>
+                </mat-chip-list>
+            </div>
+            <div class="group">
+                <h4>Brand</h4>
+                <mat-chip-list>
+                    <mat-basic-chip>
+                        Bellofy
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        Derwent
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        Prismacolor
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        Sketching Pencils
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        USLON
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        Sargent Art
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        Arteza
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        General Pencil
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        Mont Marte
+                    </mat-basic-chip>
+                </mat-chip-list>
+            </div>
+            <div class="row">
+                <button mat-raised-button color="accent">Show 00 Results </button>
+            </div>
+        </div>
+    </section>
