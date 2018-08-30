@@ -10,9 +10,9 @@
         <h1>Bleistift</h1>
     </mat-toolbar>
     <mat-nav-list id="nav">
-        <mat-list-item *ngFor="let link of links; let i = index" >
+        <mat-list-item *ngFor="let link of links; let i = index"  [routerLinkActive]="['active']" >
             <mat-divider *ngIf="i == 5"></mat-divider>
-            <a matLine href="#">{{link}}</a>
+            <a matLine [routerLink]="link | lowercase">{{link}}</a>
         </mat-list-item>
     </mat-nav-list>
 </section>
@@ -23,8 +23,8 @@
             <h4>Bleistift</h4>
         </mat-toolbar-row>
         <mat-toolbar-row>
-            <nav mat-tab-nav-bar >
-                <a mat-tab-link *ngFor="let link of links">
+            <nav mat-tab-nav-bar color="accent" >
+                <a mat-tab-link *ngFor="let link of links" [routerLink]="link | lowercase" routerLinkActive  #rla="routerLinkActive" [active]="rla.isActive">
                     {{link}}
                 </a>
             </nav>
@@ -43,20 +43,20 @@
            </div>
            <div class="column">
                 <mat-nav-list>
-                    <mat-list-item *ngFor="let link of links;" >
-                        <mat-divider></mat-divider>
-                        <a matLine href="#">{{link}}</a>
+                    <mat-list-item *ngFor="let link of links; let i = index"  [routerLinkActive]="['active']" >
+                        <mat-divider *ngIf="i == 5"></mat-divider>
+                        <a matLine [routerLink]="link | lowercase">{{link}}</a>
                     </mat-list-item>
                 </mat-nav-list>
            </div>
     </nav>
-    <article >
-        
+    <article>
+        <router-outlet></router-outlet>
     </article>
     <section id="pc">
         <div class="column">
             <div>
-                <button mat-icon-button><i class="fas fa-sliders-h"></i></button>
+                <button mat-icon-button (click)="Filter.Open()"><i class="fas fa-sliders-h"></i></button>
             </div>
             <span class="fx-auto"></span>
             <div>
@@ -74,7 +74,7 @@
     <section id="mobile">
         <div class="row">
             <div class="fx-50" >
-                <button mat-icon-button><i class="fas fa-sliders-h"></i></button>
+                <button mat-icon-button (click)="Filter.Open()"><i class="fas fa-sliders-h"></i></button>
             </div>
             <div class="fx-50" >
                 <div class="row fx-flex-end">

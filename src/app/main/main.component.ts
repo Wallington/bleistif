@@ -1,11 +1,15 @@
 /*
 * Author: Sean O'Brien
 * Create Date: 08/20/2018
-* Modify Date: 08/23/2018
+* Modify Date: 08/27/2018
 * Discription: This where site will load our indivaul pages and hold our main template
 */
 
 import { Component } from '@angular/core';
+
+//import the filter component
+import {FilterComponent} from '../filter/filter.component';
+import { Http } from '@angular/http'
 
 @Component
 ({
@@ -15,9 +19,16 @@ import { Component } from '@angular/core';
 
 export class MainComponent 
 {
+    //creating varbales from exist other components
+    constructor
+    (
+      public Filter : FilterComponent,
+      public HTTP: Http
+    ){}
+
     links: string[] = ['Feature', 'Graphite','Charcoal','Colored', 'Water Colored', "Accessory", "My Account"];
     isMenuOpen: boolean = false;
-
+    
     TogglePhoneMenu()
     {
       let mainElem = document.getElementById('main');
@@ -26,7 +37,7 @@ export class MainComponent
       let navButtonElem = document.getElementById('navButton');
       this.isMenuOpen = !this.isMenuOpen; //short cut to toggle
 
-      mainElem.className = (this.isMenuOpen) ? "open": "close";
+      mainElem.className = (this.isMenuOpen) ? "openDropDownNav": "closeDropDownNav";
       mainElem.style.top = (this.isMenuOpen) ? "400px" : "60px";
 
       navButtonElem.className = "iconRotate mat-icon-button";
@@ -43,7 +54,6 @@ export class MainComponent
           navButtonElem.className = "mat-icon-button";
       }, 200);
     }
-
     
     
 }

@@ -1,0 +1,43 @@
+/*****************************
+ *  Author: Sean O'Brien
+ *  Craete Date: 08/27/2018
+ *  Modifcation Date: 08/27/2018
+ *  Discription: This define our SPA in our site components like prodocts, our other pages as well
+ ******************************/
+
+import 
+{
+    Routes,
+    RouterModule
+} from "@angular/router";
+import { ModuleWithProviders } from "@angular/core";
+
+//import all our pages want load in our spa
+import { ProductComponent} from './product/product.component'
+import { GraphiteComponent } from './graphite/graphite.component';
+import { CharcoalComponent } from './charcoal/charcoal.component'
+const appRoutes: Routes =
+[
+    {
+        path: '',
+        redirectTo: '/',
+        pathMatch: 'full'
+    },
+    {
+        path: 'product',
+        component: ProductComponent
+    },
+    {
+        path: 'graphite',
+        component: GraphiteComponent
+    },
+    {
+        path: 'charcoal',
+        component: CharcoalComponent
+    }
+];
+
+export const appRouting: ModuleWithProviders = RouterModule.forRoot
+(
+    appRoutes
+);

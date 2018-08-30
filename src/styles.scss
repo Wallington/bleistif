@@ -72,6 +72,8 @@ html, body
     background-position: center;
     background-repeat: no-repeat;
     transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     width: 50px;
     height: 50px;
     margin-right: 12px;
@@ -82,37 +84,60 @@ html, body
     background-color: $secondaryColor;
 }
 
-// Medium Size Nav and title aka mediumSizeLayer
+/***********************************
+*   Medium Size Nav
+************************************/
 #mediumSizeLayer
 {
     padding-bottom: 40px;
     background-color: $mainColor
 }
 
-.open
+.openDropDownNav
 {
     animation-name: OpenDropDownNav;
+    -moz-animation-name: OpenDropDownNav;
+    -webkit-animation-name: OpenDropDownNav;
+    -moz-animation-duration: 200ms;
+    -webkit-animation-duration: 200ms;
     animation-duration: 200ms;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
+    -moz-animation-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
     animation-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
 }
-.close
+.closeDropDownNav
 {
     animation-name: CloseDropDownNav;
+    -moz-animation-name: CloseDropDownNav;
+    -webkit-animation-name: CloseDropDownNav;
     animation-duration: 300ms;
+    -moz-animation-duration: 300ms;
+    -webkit-animation-duration: 300ms;
+    -webkit-animation-timing-function:  cubic-bezier(0.0, 0.0, 0.2, 1);
+    -moz-animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
     animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 .iconRotate
 {
     animation-name: IconRotate;
+    -moz-animation-name: IconRotate;
+    -webkit-animation-name: IconRotate;
     animation-duration: 200ms;
+    -moz-animation-duration: 200ms;
+    -webkit-animation-duration: 200ms;
+    -webkit-animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+    -moz-animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
     animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
 }
+
 #mediumSizeLayer > mat-toolbar > mat-toolbar-row > svg
 {
     background-image: url('./assets/images/pencil.svg');
     background-position: center;
     background-repeat: no-repeat;
     transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     width: 50px;
     height: 50px;
     margin-right: 12px;
@@ -132,8 +157,9 @@ html, body
 
 
 
-//css for log in
-
+/*************************************
+*   Log In CSS
+**************************************/
 
 #log
 {
@@ -154,12 +180,18 @@ html, body
     background-position: center;
     background-repeat: no-repeat;
     transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     background-size: 100px;
     width: 150px;
     height: 150px;
     padding-top: 80px;
 
 }
+
+/**************************
+*   Shopping Cart CSS
+**************************/
 
 .shoppingCartTabContainer
 {
@@ -175,12 +207,15 @@ html, body
     justify-content: center;
     align-items: center;
 }
-
+/**********************************
+*   Filter CSS
+**********************************/
 #filter
 {
     height: 100%;
     width: 100%;
     position: absolute;
+    display: none;
     top: 0;
     background-color: $secondaryColor;
 }
@@ -263,7 +298,52 @@ mat-basic-chip:active, mat-basic-chip:hover
     cursor: pointer;
 }
 
-//all animation
+.CloseFilterModel
+{   
+    position: absolute;
+    left: 100vw;
+    display: block;
+    animation-name: FilterModelClose;
+    -moz-animation-name: FilterModelClose;
+    -webkit-animation-name: FilterModelClose;
+    animation-duration: 450ms;
+    -moz-animation-duration: 450ms;
+    -webkit-animation-duration: 450ms;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.OpenFilterModel
+{
+    position: absolute;
+    right: 0;
+    display: block;
+    animation-name: FilterModelOpen;
+    -moz-animation-name: FilterModelOpen;
+    -webkit-animation-name: FilterModelOpen;
+    animation-duration: 400ms;
+    -moz-animation-duration: 400ms;
+    -webkit-animation-duration: 400ms;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+    -moz-animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/***********************************
+*   Product 
+************************************/
+#productContent
+{
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 9px;
+    overflow-y: scroll;
+}
+
+/***********************************
+*   Custom Animation CSS
+************************************/
 @keyframes OpenDropDownNav
 {
     from
@@ -291,10 +371,45 @@ mat-basic-chip:active, mat-basic-chip:hover
     from
     {
         transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
     to
     {
         transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+    }
+}
+
+@keyframes FilterModelClose
+{
+    
+    0%
+    {
+        left: 0;
+    }
+    
+    99%
+    {
+        left: 99%;
+        display: none;
+    }
+    100%
+    {
+        left: 100%;
+        display: none;
+    }
+}
+@keyframes FilterModelOpen
+{
+    from
+    {
+        left: 100%;
+    }
+    to
+    {
+        left: 0;
     }
 }
 
@@ -324,6 +439,7 @@ mat-basic-chip:active, mat-basic-chip:hover
         background-color: rgba(255,255,255,.85);
         min-height: 100vh;
         padding-bottom: 75px;
+        box-shadow: 0px -1.5px 0px 0px rgba(0, 0, 0, 0.26);
     }
     main > section#mobile
     {
@@ -404,6 +520,7 @@ mat-basic-chip:active, mat-basic-chip:hover
         background-color: rgba(255,255,255,.85);
         min-height: 90vh;       
         padding-bottom: 75px;
+        box-shadow: 0px -1.5px 0px 0px rgba(0, 0, 0, 0.26);
     }
     main > section#mobile
     {
@@ -433,13 +550,13 @@ mat-basic-chip:active, mat-basic-chip:hover
         height: 100vh;
         display: flex;
         width: 100%;
-        
+        box-shadow: 0 0 0 0 ;
     }
     article
     {
         flex: 80%;
         background-color: rgba(255,255,255,.85);
-        box-shadow: -2px 0px 2px 0px rgba(0, 0, 0, 0.26);
+        box-shadow: -1.5px 0px 2px 0px rgba(0, 0, 0, 0.26);
     }
     main > nav
     {
@@ -456,6 +573,8 @@ mat-basic-chip:active, mat-basic-chip:hover
         background-position: center;
         background-repeat: no-repeat;
         transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
         background-size: 40px;
         width: 50px;
         height: 50px;
@@ -472,9 +591,13 @@ mat-basic-chip:active, mat-basic-chip:hover
         position: relative;
         top: -100px;
     }
-    nav > div.column > mat-nav-list > mat-list-item.active
+    #main > nav > div.column > mat-nav-list > mat-list-item.active
     {
         background-color: $secondaryColor;
+    }
+    main > section#pc 
+    {
+        box-shadow: -1.5px 0px 0px 0px rgba(0, 0, 0, 0.26);
     }
     main > section#pc > div.column
     {
@@ -484,6 +607,5 @@ mat-basic-chip:active, mat-basic-chip:hover
         padding-bottom: 12px;
         align-items: center;
     }
-    
     
 }

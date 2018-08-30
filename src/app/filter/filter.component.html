@@ -2,7 +2,7 @@
         <div id="filterContent">
             <mat-toolbar>
                 <mat-toolbar-row>
-                        <button id="navButton" mat-icon-button ><i class="fas fa-times"></i></button>
+                        <button id="navButton" mat-icon-button (click)="Close()" ><i class="fas fa-times"></i></button>
                         <h3>Filter</h3>
                         <span class="fx-auto"></span>
                         <i class="fas fa-sliders-h"></i> 
@@ -13,16 +13,16 @@
                 <h4>Category</h4>
             
                 <mat-chip-list>
-                    <mat-basic-chip [class.selected]="categoryQuery.graphite"  (click)="CategorySelection('graphite')">
+                    <mat-basic-chip>
                         Graphite
                     </mat-basic-chip>
                     <mat-basic-chip>
                         Charcoal
                     </mat-basic-chip>
-                    <mat-basic-chip>
+                    <mat-basic-chip >
                         Colored
                     </mat-basic-chip>
-                    <mat-basic-chip>
+                    <mat-basic-chip >
                         Water Color
                     </mat-basic-chip>
                     <mat-basic-chip>
@@ -34,7 +34,7 @@
                 <div class="row">
                     <h4>Price <b>$0.00 - {{maxLimit | currency}}</b></h4>
                 </div>
-                <mat-slider [(ngModel)]="maxLimit" [max]="200" [step]="10" [min]="0"></mat-slider>
+                <mat-slider [(ngModel)]="maxLimit" [max]="200" [step]="10" min="0"></mat-slider>
             </div>
             <div class="group">
                 <h4>Set Size Range</h4>
@@ -93,6 +93,9 @@
                     </mat-basic-chip>
                     <mat-basic-chip>
                         Prismacolor
+                    </mat-basic-chip>
+                    <mat-basic-chip>
+                        Staedtler
                     </mat-basic-chip>
                     <mat-basic-chip>
                         Sketching Pencils
