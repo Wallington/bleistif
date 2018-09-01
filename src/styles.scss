@@ -21,7 +21,7 @@ html, body
     width: 100%;
     height: 100%;
     margin: 0;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 //define fx class
@@ -38,9 +38,20 @@ html, body
 
 .fx-50
 {
-    width: 50%;
+    flex: 50%;
 }
-
+.fx-100
+{
+    flex: 100%;
+}
+.fx-25
+{
+    flex:25%;
+}
+.fx-75
+{
+    flex: 75%;
+}
 .fx-auto
 {
     display: flex;
@@ -330,15 +341,25 @@ mat-basic-chip:active, mat-basic-chip:hover
     animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
-/***********************************
-*   Product 
-************************************/
-#productContent
+
+div.card 
 {
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 9px;
-    overflow-y: scroll;
+    background-color: white;
+    margin: 6px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26);
+    padding-top: 6px;
+
+    display: flex;
+    border-radius: 4px;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+div.card:hover, div.card:active
+{
+    background-color: rgba(255,255,255,.88);
+    cursor: pointer;
 }
 
 /***********************************
@@ -433,23 +454,50 @@ mat-basic-chip:active, mat-basic-chip:hover
     }
     main
     {
-        width: 100%;
         position: absolute;
         top: 60px;
+        width: 100%;
+        height: calc(100% - 56px - 60px);
         background-color: rgba(255,255,255,.85);
-        min-height: 100vh;
-        padding-bottom: 75px;
         box-shadow: 0px -1.5px 0px 0px rgba(0, 0, 0, 0.26);
     }
-    main > section#mobile
+    section#mobile
     {
-        position: sticky;
+        position: absolute;
         top: calc(100vh - 56px);
-        height: 56px;
-        padding-left: 16px;
+        width: 100vw;
         line-height: 56px;
-        background-color: rgba(66,164,245,.85);
+        background-color: $mainColor;
         box-shadow: 0px -1.5px 0px 0px rgba(0, 0, 0, 0.26);
+    }
+    article
+    {
+        height: 100%;
+        overflow-y: scroll;
+        margin-bottom: 120px;
+    }
+    
+    div.card > div.row
+    {
+        display: flex;
+        justify-content: center;
+    }
+    div.card > div.row > div.column
+    {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    div.card > div.row > div.column > div.row
+    {
+        display: flex;
+        text-align: center;
+    }
+    div.card > div.row > div > img
+    {
+        width: auto;
+        height: auto;
+        max-width: 200px;
+        max-height: 200px;
     }
 }
 
@@ -476,22 +524,72 @@ mat-basic-chip:active, mat-basic-chip:hover
 
     main
     {
-        width: 100%;
         position: absolute;
         top: 60px;
+        width: 100vw;
+        height: calc(100% - 56px - 60px);
         background-color: rgba(255,255,255,.85);
-        min-height: 90vh;
-        padding-bottom: 75px;
-    }
-    main > section#mobile
-    {
-        position: sticky;
-        top: calc(100vh - 56px);
-        height: 56px;
-        padding-left: 16px;
-        line-height: 56px;
-        background-color: rgba(66,164,245,.85);
         box-shadow: 0px -1.5px 0px 0px rgba(0, 0, 0, 0.26);
+    }
+    section#mobile
+    {
+        position: absolute;
+        top: calc(100vh - 56px);
+        width: 100%;
+        line-height: 56px;
+        background-color: $mainColor;
+        box-shadow: 0px -1.5px 0px 0px rgba(0, 0, 0, 0.26);
+    }
+    article
+    {
+        height: 100%;
+        overflow-y: scroll;
+        margin-bottom: 120px;
+    }
+    .groupListing
+    {
+        min-height: 200px;
+        background-color: white;
+        padding: 9px;
+        margin-bottom: 9px;
+        margin-top: 9px;
+        border-radius: 4px;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+        display: flex;
+        justify-content: center;
+    }
+
+    article
+    {
+        padding-left: 12px;
+        padding-right: 12px;
+
+        overflow-y: scroll;
+    }
+    div.card > div.row
+    {
+        display: flex;
+        justify-content: center;
+    }
+    div.card > div.row > div.column
+    {
+        padding-left: 12px;
+        padding-right: 12px;
+        
+        
+    }
+    div.card > div.row > div.column > div.row
+    {
+        display: flex;
+        text-align: center;
+        
+    }
+    div.card > div.row > div > img
+    {
+        width: auto;
+        height: auto;
+        max-width: 200px;
+        max-height: 200px;
     }
 }
 
@@ -514,23 +612,64 @@ mat-basic-chip:active, mat-basic-chip:hover
     }
     main
     {
-        width: 100%;
         position: absolute;
         top: 130px;
+        width: 100%;
+        height: calc(100% - 56px - 130px);
         background-color: rgba(255,255,255,.85);
-        min-height: 90vh;       
-        padding-bottom: 75px;
         box-shadow: 0px -1.5px 0px 0px rgba(0, 0, 0, 0.26);
     }
-    main > section#mobile
+    section#mobile
     {
-        position: sticky;
-        background-color: rgba(66,164,245,.85);
-        box-shadow: 5px 0 2px 0 rgba(0,0,0, .26);
+        position: absolute;
         top: calc(100vh - 56px);
-        height: 56px;
-        padding-left: 16px;
+        width: 100vw;
         line-height: 56px;
+        background-color: $mainColor;
+        box-shadow: 0px -1.5px 0px 0px rgba(0, 0, 0, 0.26);
+    }
+    article
+    {
+        height: 100%;
+        overflow-y: scroll;
+        margin-bottom: 120px;
+    }
+    
+
+    article
+    {
+        padding-left: 12px;
+        padding-right: 12px;
+
+        overflow-y: scroll;
+    }
+
+    div.card > div.row
+    {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        padding-left: 12px;
+        padding-right: 12px;
+        align-items: center;
+    }
+    div.card > div.row > div.column
+    {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    div.card > div.row > div.column > div.row
+    {
+        display: flex;
+        text-align: center;
+    }
+    div.card > div.row > div > img
+    {
+        width: auto;
+        height: auto;
+
+        max-width: 200px;
+        height: 200px;
     }
 }
 
@@ -607,5 +746,38 @@ mat-basic-chip:active, mat-basic-chip:hover
         padding-bottom: 12px;
         align-items: center;
     }
-    
+    article
+    {
+        padding-left: 12px;
+        padding-right: 12px;
+
+        overflow-y: scroll;
+    }
+    div.card > div.row
+    {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        padding-left: 12px;
+        padding-right: 12px;
+        align-items: center;
+    }
+    div.card > div.row > div.column
+    {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    div.card > div.row > div.column > div.row
+    {
+        display: flex;
+        text-align: center;
+    }
+    div.card > div.row > div > img
+    {
+        width: auto;
+        height: auto;
+
+        max-width: 200px;
+        height: 200px;
+    }
 }

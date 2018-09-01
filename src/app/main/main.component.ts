@@ -26,7 +26,37 @@ export class MainComponent
       public HTTP: Http
     ){}
 
-    links: string[] = ['Feature', 'Graphite','Charcoal','Colored', 'Water Colored', "Accessory", "My Account"];
+    navList = 
+    [
+       {
+          name: "Feature",
+          link: "feature"
+       },
+       {
+          name: "Graphite",
+          link: "graphite"
+       },
+       {
+          name: "Charcoal",
+          link: "charcoal"
+       },
+       {
+          name: "Colored",
+          link: "colored"
+       },
+       {
+          name: "Water Colored",
+          link: "watercolored"
+       },
+       {
+          name: "Accessory",
+          link: "accessory"
+       },
+       {
+          name: "My Account",
+          link: "account"
+       }
+    ]
     isMenuOpen: boolean = false;
     
     TogglePhoneMenu()

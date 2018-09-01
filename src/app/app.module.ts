@@ -15,6 +15,8 @@ import
   MatChipsModule,
   MatDividerModule,
   MatSliderModule,
+  MatGridListModule,
+  MatCardModule
 } from "@angular/material";
 
 // import any pages components
@@ -22,6 +24,10 @@ import { MainComponent } from './main/main.component';
 import { ProductComponent } from './product/product.component';
 import { GraphiteComponent } from './graphite/graphite.component';
 import { CharcoalComponent } from './charcoal/charcoal.component';
+import { FeatureComponent } from './feature/feature.component';
+import { ColoredComponent } from './colored/colored.component';
+import { WaterColoredComponent } from './waterColored/waterColored.component';
+import { AccessoryComponent } from './accessory/accessory.component';
 //import component
 import { FilterComponent } from './filter/filter.component'
 
@@ -33,7 +39,11 @@ import { FilterComponent } from './filter/filter.component'
     FilterComponent,
     ProductComponent,
     GraphiteComponent,
-    CharcoalComponent
+    CharcoalComponent,
+    FeatureComponent,
+    ColoredComponent,
+    WaterColoredComponent,
+    AccessoryComponent,
   ],
   imports: 
   [
@@ -48,7 +58,9 @@ import { FilterComponent } from './filter/filter.component'
     MatTabsModule,
     MatChipsModule,
     MatDividerModule,
-    MatSliderModule
+    MatSliderModule,
+    MatGridListModule,
+    MatCardModule
   ],
   exports:
   [ //also any google materail must also be export as well as import
@@ -58,7 +70,9 @@ import { FilterComponent } from './filter/filter.component'
     MatTabsModule,
     MatChipsModule,
     MatDividerModule,
-    MatSliderModule
+    MatSliderModule,
+    MatGridListModule,
+    MatCardModule
   ],
   providers: 
   [

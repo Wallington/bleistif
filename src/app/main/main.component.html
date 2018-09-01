@@ -10,9 +10,9 @@
         <h1>Bleistift</h1>
     </mat-toolbar>
     <mat-nav-list id="nav">
-        <mat-list-item *ngFor="let link of links; let i = index"  [routerLinkActive]="['active']" >
+        <mat-list-item *ngFor="let nav of navList; let i = index"  [routerLinkActive]="['active']" >
             <mat-divider *ngIf="i == 5"></mat-divider>
-            <a matLine [routerLink]="link | lowercase">{{link}}</a>
+            <a matLine [routerLink]="nav.link">{{nav.name}}</a>
         </mat-list-item>
     </mat-nav-list>
 </section>
@@ -24,8 +24,8 @@
         </mat-toolbar-row>
         <mat-toolbar-row>
             <nav mat-tab-nav-bar color="accent" >
-                <a mat-tab-link *ngFor="let link of links" [routerLink]="link | lowercase" routerLinkActive  #rla="routerLinkActive" [active]="rla.isActive">
-                    {{link}}
+                <a mat-tab-link *ngFor="let nav of navList" [routerLink]="nav.link" routerLinkActive  #rla="routerLinkActive" [active]="rla.isActive">
+                    {{nav.name}}
                 </a>
             </nav>
         </mat-toolbar-row>
@@ -43,9 +43,9 @@
            </div>
            <div class="column">
                 <mat-nav-list>
-                    <mat-list-item *ngFor="let link of links; let i = index"  [routerLinkActive]="['active']" >
+                    <mat-list-item *ngFor="let nav of navList; let i = index"  [routerLinkActive]="['active']" >
                         <mat-divider *ngIf="i == 5"></mat-divider>
-                        <a matLine [routerLink]="link | lowercase">{{link}}</a>
+                        <a matLine [routerLink]="nav.link">{{nav.name}}</a>
                     </mat-list-item>
                 </mat-nav-list>
            </div>
@@ -71,7 +71,10 @@
             </div>
         </div>
     </section>
-    <section id="mobile">
+    
+    
+</main>
+<section id="mobile">
         <div class="row">
             <div class="fx-50" >
                 <button mat-icon-button (click)="Filter.Open()"><i class="fas fa-sliders-h"></i></button>
@@ -90,6 +93,4 @@
             </div>
         </div>
     </section>
-    
-</main>
 <app-filter></app-filter>

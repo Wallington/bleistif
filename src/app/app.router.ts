@@ -13,9 +13,14 @@ import
 import { ModuleWithProviders } from "@angular/core";
 
 //import all our pages want load in our spa
-import { ProductComponent} from './product/product.component'
+import { ProductComponent} from './product/product.component';
 import { GraphiteComponent } from './graphite/graphite.component';
-import { CharcoalComponent } from './charcoal/charcoal.component'
+import { CharcoalComponent } from './charcoal/charcoal.component';
+import { FeatureComponent } from './feature/feature.component';
+import { ColoredComponent } from './colored/colored.component';
+import { WaterColoredComponent } from './waterColored/waterColored.component';
+import { AccessoryComponent } from './accessory/accessory.component';
+
 const appRoutes: Routes =
 [
     {
@@ -34,6 +39,22 @@ const appRoutes: Routes =
     {
         path: 'charcoal',
         component: CharcoalComponent
+    },
+    {
+        path: 'feature',
+        component: FeatureComponent
+    },
+    {
+        path: 'colored',
+        component: ColoredComponent
+    },
+    {
+        path: 'watercolored',
+        component: WaterColoredComponent
+    },
+    {
+        path: 'accessory',
+        component: AccessoryComponent
     }
 ];
 
