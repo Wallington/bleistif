@@ -161,6 +161,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "graphite",
+            "name": "Derwent Graphic Drawing Pencils Full Range Set",
             "company": "Derwent",
             "image": "../../assets/images/pencil/graphite/derwentGraphicFullRangeSet.jpg",
             "collectionSize": 24,

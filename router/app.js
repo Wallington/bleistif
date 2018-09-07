@@ -151,6 +151,51 @@ Router.get('/db/get/accessory', function(req, res)
    
 });
 
+Router.get('/db/filter/:json', function(req,res)
+{    
+    var data = JSON.parse(req.params.json);
+
+    Product.find
+    (
+        {
+            $and: 
+            [
+                {
+                    category: 
+                    {
+                        $in: data[0]['category']
+                    }
+                },
+                {
+                    price:
+                    {
+                        $lte: data[0]['maxPriceLimit']
+                    }
+                },
+                {
+                    collectionSize: 
+                    {
+                        $lte: data[0]['maxSetRange']
+                    }
+                },
+                {
+                    company:
+                    {
+                       $in: data[0]['brands'] 
+                    }
+                }
+            ]
+        },
+        function(err, data)
+        {
+            if(err)
+            {
+                console.log(err);
+            }
+            res.json(data);
+        }
+    )
+});
 
 
 module.exports = Router;

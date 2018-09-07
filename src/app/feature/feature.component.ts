@@ -11,6 +11,8 @@ import
     OnInit 
 } from '@angular/core';
 
+import { Router } from "@angular/router";
+
 import { Http } from '@angular/http'
 
 @Component
@@ -25,7 +27,8 @@ export class FeatureComponent implements OnInit
     
     constructor
     (
-        public HTTP: Http
+        public HTTP: Http,
+        private Router: Router
     ){}
 
 
@@ -36,5 +39,10 @@ export class FeatureComponent implements OnInit
             data = JSON.parse(data['_body']);
             this.productList = data;
         })
+    }
+
+    SendToFullProduct(productIndex)
+    {
+        this.Router.navigate(['/product', productIndex]);
     }
 }

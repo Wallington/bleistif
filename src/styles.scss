@@ -356,11 +356,37 @@ div.card
 
 }
 
+
 div.card:hover, div.card:active
 {
     background-color: rgba(255,255,255,.88);
     cursor: pointer;
 }
+
+div.nonSelectCard
+{
+    background-color: white;
+    margin: 6px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26);
+
+    display: flex;
+    border-radius: 4px;
+    flex-direction: column;
+    justify-content: center;
+}
+ div#imageZone
+ {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+ }
+ div#imageZone > img
+ {
+     width: auto;
+     height: auto;
+     max-width: 400px;
+     max-height: 400px;
+ }
 
 /***********************************
 *   Custom Animation CSS
@@ -499,6 +525,20 @@ div.card:hover, div.card:active
         max-width: 200px;
         max-height: 200px;
     }
+    div#imageZone
+    {
+       max-width: 100%;
+       display: flex;
+       flex-wrap: nowrap;
+    }
+    div#imageZone > img
+    {
+        width: auto;
+        height: auto;
+        max-width: 400px;
+        max-height: 400px;
+    }
+
 }
 
 /**************************************

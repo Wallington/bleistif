@@ -20,6 +20,7 @@ import { FeatureComponent } from './feature/feature.component';
 import { ColoredComponent } from './colored/colored.component';
 import { WaterColoredComponent } from './waterColored/waterColored.component';
 import { AccessoryComponent } from './accessory/accessory.component';
+import { FilterProductDisplayComponent } from './filterProductDisplay/filterProductDisplay.component'
 
 const appRoutes: Routes =
 [
@@ -29,7 +30,7 @@ const appRoutes: Routes =
         pathMatch: 'full'
     },
     {
-        path: 'product',
+        path: 'product/:id',
         component: ProductComponent
     },
     {
@@ -55,6 +56,10 @@ const appRoutes: Routes =
     {
         path: 'accessory',
         component: AccessoryComponent
+    },
+    {
+        path: 'filter/:data',
+        component: FilterProductDisplayComponent
     }
 ];
 
