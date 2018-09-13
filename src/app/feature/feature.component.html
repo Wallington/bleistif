@@ -1,6 +1,6 @@
-<div class="card" *ngFor="let product of productList" (click)="SendToFullProduct(product._id)">
+<div class="card selectable" *ngFor="let product of productList" (click)="SendToFullProduct(product._id)">
     <div class="row fx-100">
-        <div>
+        <div class="preview">
             <img [src]="product.image">
         </div>
         <div class="column fx-75">

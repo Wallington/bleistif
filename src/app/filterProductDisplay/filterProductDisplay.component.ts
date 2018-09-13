@@ -1,7 +1,7 @@
 /*
 * Author: Sean O'Brien
 * Create Date: 09/04/2018
-* Modify Date: 09/07/2018
+* Modify Date: 09/11/2018
 * Discription: this where load list from user selection
 */
 
@@ -14,6 +14,7 @@ import
 
 import 
 {
+    Router,
     ActivatedRoute
 } from '@angular/router';
 
@@ -30,6 +31,7 @@ export class FilterProductDisplayComponent implements OnInit, DoCheck
     
     constructor
     (
+        private Router: Router,
         private route: ActivatedRoute
     ){}
 
@@ -43,5 +45,10 @@ export class FilterProductDisplayComponent implements OnInit, DoCheck
     {
         //this do check if data was change after ngInit was first ran
         this.productList = JSON.parse( this.route.snapshot.paramMap.get('data'));
+    }
+
+    SendToFullProduct(productIndex)
+    {
+        this.Router.navigate(['/product', productIndex]);
     }
 }

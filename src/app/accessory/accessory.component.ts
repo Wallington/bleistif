@@ -1,7 +1,7 @@
 /*
 * Author: Sean O'Brien
-* Create Date: 08/270/2018
-* Modify Date: 08/27/2018
+* Create Date: 08/27/2018
+* Modify Date: 09/11/2018
 * Discription: this where load list of only graphite product from db
 */
 
@@ -11,7 +11,8 @@ import
     OnInit 
 } from '@angular/core';
 
-import { Http } from '@angular/http'
+import { Http } from '@angular/http';
+import { Router } from "@angular/router";
 
 @Component
 ({
@@ -25,7 +26,8 @@ export class AccessoryComponent implements OnInit
     col = 1;
     constructor
     (
-        public HTTP: Http
+        public HTTP: Http,
+        private Router: Router
     ){}
 
 
@@ -38,8 +40,8 @@ export class AccessoryComponent implements OnInit
         })
     }
 
-    Test()
+    SendToFullProduct(productIndex)
     {
-        console.log('click');
+        this.Router.navigate(['/product', productIndex]);
     }
 }

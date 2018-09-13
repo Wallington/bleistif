@@ -357,36 +357,14 @@ div.card
 }
 
 
-div.card:hover, div.card:active
+div.card.selectable:hover, div.card.selectable:active
 {
     background-color: rgba(255,255,255,.88);
     cursor: pointer;
 }
 
-div.nonSelectCard
-{
-    background-color: white;
-    margin: 6px;
-    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26);
 
-    display: flex;
-    border-radius: 4px;
-    flex-direction: column;
-    justify-content: center;
-}
- div#imageZone
- {
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
- }
- div#imageZone > img
- {
-     width: auto;
-     height: auto;
-     max-width: 400px;
-     max-height: 400px;
- }
+
 
 /***********************************
 *   Custom Animation CSS
@@ -518,27 +496,33 @@ div.nonSelectCard
         display: flex;
         text-align: center;
     }
-    div.card > div.row > div > img
+    div.card > div.row > div.preview > img
     {
         width: auto;
         height: auto;
         max-width: 200px;
         max-height: 200px;
     }
-    div#imageZone
-    {
-       max-width: 100%;
-       display: flex;
-       flex-wrap: nowrap;
-    }
-    div#imageZone > img
+    div.card > div.column > div.large > img
     {
         width: auto;
         height: auto;
-        max-width: 400px;
-        max-height: 400px;
+
+        max-width: 328px;
+        height: 328px;
+    }
+    div.card > div.column > div.large
+    {
+        display: flex;
+        width: 100%;
+        justify-content: center;
     }
 
+    div.card > div.column 
+    {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
 }
 
 /**************************************
@@ -624,12 +608,31 @@ div.nonSelectCard
         text-align: center;
         
     }
-    div.card > div.row > div > img
+    div.card > div.row > div.preview > img
     {
         width: auto;
         height: auto;
         max-width: 200px;
         max-height: 200px;
+    }
+    div.card > div.column > div.large > img
+    {
+        width: auto;
+        height: auto;
+
+        max-width: 328px;
+        height: 328px;
+    }
+    div.card > div.column > div.large
+    {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    div.card > div.column 
+    {
+        padding-left: 12px;
+        padding-right: 12px;
     }
 }
 
@@ -692,6 +695,7 @@ div.nonSelectCard
         padding-left: 12px;
         padding-right: 12px;
         align-items: center;
+        
     }
     div.card > div.row > div.column
     {
@@ -703,13 +707,31 @@ div.nonSelectCard
         display: flex;
         text-align: center;
     }
-    div.card > div.row > div > img
+    div.card > div.row > div.preview > img
     {
         width: auto;
         height: auto;
 
         max-width: 200px;
         height: 200px;
+    }
+    div.card > div.column > div.large > img
+    {
+        width: auto;
+        height: auto;
+        max-width: 600px;
+        max-height: 600px;
+    }
+    div.card > div.column > div.large
+    {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    div.card > div.column 
+    {
+        padding-left: 12px;
+        padding-right: 12px;
     }
 }
 
@@ -812,7 +834,7 @@ div.nonSelectCard
         display: flex;
         text-align: center;
     }
-    div.card > div.row > div > img
+    div.card > div.row > div.preview > img
     {
         width: auto;
         height: auto;
@@ -820,4 +842,24 @@ div.nonSelectCard
         max-width: 200px;
         height: 200px;
     }
+    div.card > div.column > div.large > img
+    {
+        width: auto;
+        height: auto;
+
+        max-width: 700px;
+        max-height: 700px;
+    }
+    div.card > div.column > div.large
+    {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    div.card > div.column 
+    {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    
 }

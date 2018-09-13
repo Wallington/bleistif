@@ -196,6 +196,17 @@ Router.get('/db/filter/:json', function(req,res)
         }
     )
 });
-
+Router.get('/db/get/product/:id', function(req, res)
+{
+    Product.find({_id: req.params.id}, 
+    function(err, data)
+    {
+        if(err)
+        {
+            console.log(err);
+        }
+        res.json(data);
+    });
+});
 
 module.exports = Router;

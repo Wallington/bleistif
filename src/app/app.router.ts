@@ -26,7 +26,7 @@ const appRoutes: Routes =
 [
     {
         path: '',
-        redirectTo: '/',
+        redirectTo: '/feature',
         pathMatch: 'full'
     },
     {
