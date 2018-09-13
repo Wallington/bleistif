@@ -8,7 +8,6 @@ import
 { 
     Component,
     OnInit
-    DoCheck
 } from '@angular/core';
 
 import 
