@@ -24,7 +24,7 @@ import { Http } from '@angular/http'
 export class FeatureComponent implements OnInit
 {
     productList;
-    
+    colSize = this.SetColSize();
     constructor
     (
         public HTTP: Http,
@@ -38,7 +38,28 @@ export class FeatureComponent implements OnInit
         {
             data = JSON.parse(data['_body']);
             this.productList = data;
-        })
+
+            for(let i = 0; i < this.productList.length; i++)
+            {
+                this.productList[i].shorten = this.productList[i].name.substr(0, 30);
+                this.productList[i].shorten = this.productList[i].shorten += "...";
+            }
+        });
+        
+    }
+
+    SetColSize()
+    {
+        let localSize = window.innerWidth;
+        if(localSize < 449.25)
+            return 1;
+        else if(localSize < 767.25)
+            return 2;
+        else if(localSize < 1079.25)
+            return 3;
+        else
+            return 4;
+            
     }
 
     SendToFullProduct(productIndex)

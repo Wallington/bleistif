@@ -1,32 +1,28 @@
-<div class="card" *ngFor="let product of productList">
-        <div class="column">
-                <section>
-                    <div class="row">
-                        <div class="fx-50">
-                            <button mat-icon-button><i class="fas fa-times"></i></button>
-                        </div>
-                        <div class="fx-50">
-                            <div class="row" style="display: flex; width: 100%; justify-content: flex-end;">
-                                <div>
-                                    <button mat-icon-button><i class="fas fa-cart-plus"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div class="large">
-                    <img [src]="product.image">
-                </div>
-                <div>
-                    <h2>{{product.name}}</h2>
-                    <h5>By {{product.company}}</h5>
-                    <mat-divider></mat-divider>
-                    <h4>Price: {{product.price | currency}}</h4>
-                    <h4>
-                        <ul *ngFor="let discription of product.discription">
-                            <li>{{discription}}</li>
-                        </ul>
-                    </h4>
-                </div>
+<div id="productInfo">
+    <div id="ImgContainer" class="column">
+         <img src="../../assets/images/pencil/graphite/derwentGraphicHardSet.jpg">
+         <div class="row">
+              <div>
+                  xx
+              </div>
+              <div class="fx-auto"></div>
+              <div>
+                  O
+                  O
+                  O
+              </div>
+         </div>
+    </div>
+    <div id="productContent">
+        <div class="row" style="align-content: center">
+            <div class="row">
+                <mat-basic-chip>D</mat-basic-chip>
+                <h5>Derwent</h5>
+            </div>
+            <div class="fx-auto"></div>
+            <div>
+                <h2>$14.63</h2>
+            </div>
         </div>
     </div>
+</div>

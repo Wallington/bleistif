@@ -35,14 +35,15 @@ export class ProductComponent implements OnInit
     ){};
 
     productList;
-
+    imgMaxWidthSize = 0;
     ngOnInit()
     {
-        let id = this.route.snapshot.paramMap.get('id');
+        /*let id = this.route.snapshot.paramMap.get('id');
         this.HTTP.get('http://localhost:4201/db/get/product/' + id).subscribe((data) =>
         {
            this.productList = JSON.parse(data['_body']);
-        });
+        });*/
+        this.imgMaxWidthSize = window.innerWidth;
     }
     
     

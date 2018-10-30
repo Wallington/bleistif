@@ -1,3 +1,4 @@
+
 /***********************
  *  Author Sean O'Brien
  *  Create Date: 08/29/2018
@@ -10,10 +11,16 @@ var path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const App = Express();
-if(mongoose.connect('mongodb://localhost:27017/bleistift'))
-{
-    console.log('error');
-}
+var MongoClient = require('mongodb').MongoClient;
+
+/*******************************
+*   Connecting to the MongoDB Database via MongoDB Cluster
+********************************/
+var uri = "mongodb+srv://bleistift:Weather8624@seanobrienportfolio-7jkle.mongodb.net/bleistift?retryWrites=true";
+
+mongoose.connect(uri);
+
+
 const AppRoutes = require('./router/app');
 /*******************************
 *   Import our Custom Model
@@ -49,6 +56,10 @@ App.listen(4201, ()=>
 
 //if we visit "localhost:4201/db/create"
 // this will generate new product database
+App.route('/db/test/').get((req,res) =>
+{
+    console.log('testing console.');
+});
 App.route('/db/create').get((req, res) =>
 {
     //JSON of each product from Amazon Store

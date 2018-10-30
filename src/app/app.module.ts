@@ -14,7 +14,10 @@ import
   MatTabsModule,
   MatChipsModule,
   MatDividerModule,
-  MatSliderModule
+  MatSliderModule,
+  MatGridListModule,
+  MatRippleModule,
+  MatTooltipModule
 } from "@angular/material";
 
 // import any pages components
@@ -29,8 +32,10 @@ import { AccessoryComponent } from './accessory/accessory.component';
 //import component
 import { FilterComponent } from './filter/filter.component';
 import { FilterProductDisplayComponent } from './filterProductDisplay/filterProductDisplay.component';
+import { ShoppingCartComponent } from './shoppingCart/shoppingCart.component';
 
-@NgModule({
+@NgModule
+({
   declarations: 
   [
     MainComponent,
@@ -42,7 +47,8 @@ import { FilterProductDisplayComponent } from './filterProductDisplay/filterProd
     ColoredComponent,
     WaterColoredComponent,
     AccessoryComponent,
-    FilterProductDisplayComponent
+    FilterProductDisplayComponent,
+    ShoppingCartComponent
   ],
   imports: 
   [
@@ -58,7 +64,9 @@ import { FilterProductDisplayComponent } from './filterProductDisplay/filterProd
     MatChipsModule,
     MatDividerModule,
     MatSliderModule,
-    
+    MatGridListModule,
+    MatRippleModule,
+    MatTooltipModule
   ],
   exports:
   [ //also any google materail must also be export as well as import
@@ -69,12 +77,15 @@ import { FilterProductDisplayComponent } from './filterProductDisplay/filterProd
     MatChipsModule,
     MatDividerModule,
     MatSliderModule,
-    
+    MatGridListModule,
+    MatRippleModule,
+    MatTooltipModule
   ],
   providers: 
   [
     FilterComponent,
-    FilterProductDisplayComponent
+    FilterProductDisplayComponent,
+    ShoppingCartComponent
   ],
   bootstrap: [MainComponent]
 })

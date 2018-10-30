@@ -3,6 +3,13 @@ const mongoose = require('mongoose');
 var Router = Express.Router();
 const App = Express();
 
+/*****************************
+ *  Connect to Mongo DB
+ *****************************/
+var uri = "mongodb+srv://bleistift:Weather8624@seanobrienportfolio-7jkle.mongodb.net/bleistift?retryWrites=true";
+
+mongoose.connect(uri);
+
 /*******************************
 *   Import our Custom Model
 ********************************/

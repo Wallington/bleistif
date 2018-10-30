@@ -51,10 +51,6 @@ export class MainComponent
        {
           name: "Accessory",
           link: "accessory"
-       },
-       {
-          name: "My Account",
-          link: "account"
        }
     ]
     isMenuOpen: boolean = false;

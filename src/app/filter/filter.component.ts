@@ -247,10 +247,11 @@ export class FilterComponent implements OnInit
     }
     ShowResultPage()
     {
+        this.Router.navigate(['/filter', JSON.stringify(this.jsonData)]);
         setTimeout(() =>
         {
-            this.Router.navigate(['/filter', JSON.stringify(this.jsonData)]);
+            
             this.Close();
-        }, 200);
+        }, 500);
     }
 }
