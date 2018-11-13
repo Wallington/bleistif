@@ -1,10 +1,11 @@
 //importing system components
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { appRouting } from './app.router';
-import { HttpModule } from '@angular/http'
+import { HttpModule } from '@angular/http';
+
 //google material component module
 import 
 { 

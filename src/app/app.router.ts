@@ -8,7 +8,7 @@
 import 
 {
     Routes,
-    RouterModule
+    RouterModule,
 } from "@angular/router";
 import { ModuleWithProviders } from "@angular/core";
 
@@ -35,27 +35,51 @@ const appRoutes: Routes =
     },
     {
         path: 'graphite',
-        component: GraphiteComponent
+        component: GraphiteComponent,
+        data:
+        {
+            animation: 'graphite'
+        }
     },
     {
         path: 'charcoal',
-        component: CharcoalComponent
+        component: CharcoalComponent,
+        data:
+        {
+            animation: 'charcoal'
+        }
     },
     {
         path: 'feature',
-        component: FeatureComponent
+        component: FeatureComponent,
+        data:
+        {
+            animation: 'feature'
+        }
     },
     {
         path: 'colored',
-        component: ColoredComponent
+        component: ColoredComponent,
+        data:
+        {
+            animation: 'colored'
+        }
     },
     {
         path: 'watercolored',
-        component: WaterColoredComponent
+        component: WaterColoredComponent,
+        data:
+        {
+            animation: 'waterColored'
+        }
     },
     {
         path: 'accessory',
-        component: AccessoryComponent
+        component: AccessoryComponent,
+        data:
+        {
+            animation: 'accessory'
+        }
     },
     {
         path: 'filter/:data',

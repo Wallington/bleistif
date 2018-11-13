@@ -1,22 +1,21 @@
-
 <mat-grid-list cols="{{colSize}}" gutterSize="8px" rowHeight="1:1">
-    <mat-grid-tile *ngFor="let product of productList" matRipple  (click)="SendToFullProduct(product._id)">       
-        <img [src]="product.image">
-        <mat-grid-tile-footer>
-            <div class="column fx-100">
+        <mat-grid-tile *ngFor="let product of productList; let i = index" matRipple  (click)="SendToFullProduct(product._id)" id="i-{{i}}">       
+            <img [src]="product.image">
+            <mat-grid-tile-footer>
                 <div class="column fx-100">
-                    <div matTooltip="{{product.name}}" matTooltipShowDelay="1000" matTooltipClass="matTooltipClass">{{product.shorten}}</div>
-                </div>
-                <div class="row">
-                    <div>
-                        by {{product.company}}
+                    <div class="column fx-100">
+                        <div matTooltip="{{product.name}}" matTooltipShowDelay="1000" matTooltipClass="matTooltipClass">{{product.shorten}}</div>
                     </div>
-                    <span class="fx-auto"></span> 
-                    <div>
-                        {{product.price | currency}}
-                    </div>
-                </div> 
-            </div>            
-        </mat-grid-tile-footer>
-    </mat-grid-tile>
-</mat-grid-list>
+                    <div class="row">
+                        <div>
+                            by {{product.company}}
+                        </div>
+                        <span class="fx-auto"></span> 
+                        <div>
+                            {{product.price | currency}}
+                        </div>
+                    </div> 
+                </div>            
+            </mat-grid-tile-footer>
+        </mat-grid-tile>
+    </mat-grid-list>

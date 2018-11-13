@@ -23,13 +23,26 @@ import { Router } from "@angular/router";
 export class AccessoryComponent implements OnInit
 {
     productList;
-    col = 1;
+    colSize = this.SetColSize();
     constructor
     (
         public HTTP: Http,
         private Router: Router
     ){}
-
+    
+    SetColSize()
+    {
+        let localSize = window.innerWidth;
+        if(localSize < 449.25)
+            return 1;
+        else if(localSize < 767.25)
+            return 2;
+        else if(localSize < 1079.25)
+            return 3;
+        else
+            return 4;
+            
+    }
 
     ngOnInit()
     {
@@ -37,6 +50,19 @@ export class AccessoryComponent implements OnInit
         {
             data = JSON.parse(data['_body']);
             this.productList = data;
+
+            for(let i = 0; i < this.productList.length; i++)
+            {
+                if(this.productList[i].name.length > 33)
+                {
+                    this.productList[i].shorten = this.productList[i].name.substr(0, 33);
+                    this.productList[i].shorten = this.productList[i].shorten += "...";
+                }
+                else
+                {
+                    this.productList[i].shorten = this.productList[i].name;
+                }
+            }
         })
     }
 

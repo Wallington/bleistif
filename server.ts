@@ -84,7 +84,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "graphite",
-            "name" : "Premier Turquoise Medium Lead",
+            "name" : "Turquoise Medium Lead",
             "company": "Prismacolor",
             "image": "../../assets/images/pencil/graphite/premierTurquoiseMediumSet.jpg",
             "collectionSize": 12,
@@ -101,7 +101,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "graphite",
-            "name" : "Premier Turquoise Soft Lead",
+            "name" : "Turquoise Soft Lead",
             "company": "Prismacolor",
             "image": "../../assets/images/pencil/graphite/premierTurquoiseSoftSet.jpg",
             "collectionSize": 12,
@@ -118,7 +118,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "graphite",
-            "name" : "Derwent Graphic Drawing Pencils Medium Set",
+            "name" : "Graphic Drawing Pencils Medium Set",
             "company": "Derwent",
             "image": "../../assets/images/pencil/graphite/derwentGraphicMediumSet.jpg",
             "collectionSize": 12,
@@ -135,7 +135,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "graphite",
-            "name" : "Derwent Graphic Pencils Hard Set",
+            "name" : "Graphic Pencils Hard Set",
             "company": "Derwent",
             "image": "../../assets/images/pencil/graphite/derwentGraphicHardSet.jpg",
             "collectionSize": 12,
@@ -152,7 +152,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "graphite",
-            "name" : "Derwent Graphic Drawing Pencils Soft Set",
+            "name" : "Graphic Drawing Pencils Soft Set",
             "company": "Derwent",
             "image": "../../assets/images/pencil/graphite/derwentGraphicSoftSet.jpg",
             "collectionSize": 12,
@@ -172,7 +172,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "graphite",
-            "name": "Derwent Graphic Drawing Pencils Full Range Set",
+            "name": "Graphic Drawing Pencils Full Range Set",
             "company": "Derwent",
             "image": "../../assets/images/pencil/graphite/derwentGraphicFullRangeSet.jpg",
             "collectionSize": 24,
@@ -189,7 +189,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "graphite",
-            "name" : "Sketching Pencils 24 Drawing Pencils Set",
+            "name" : "24 Drawing Pencils Set",
             "company": "Sketching Pencils",
             "image": "../../assets/images/pencil/graphite/sketchingPencilsSoftSet.jpg",
             "collectionSize": 24,
@@ -238,7 +238,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "graphite",
-            "name" : "Bellofy Art Pencils Sketch Kit",
+            "name" : "Pencils Sketch Kit",
             "company": "Bellofy",
             "image": "../../assets/images/pencil/graphite/bellofyArtPencilSketchkitHardSet.jpg",
             "collectionSize": 12,
@@ -255,7 +255,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "graphite",
-            "name" : "Arteza Professional Drawing Sketch Pencils Set",
+            "name" : "Professional Drawing Sketch Pencils Set",
             "company": "Arteza",
             "image": "../../assets/images/pencil/graphite/artezaProfessionalDrawingSketchMediumSet.jpg",
             "collectionSize": 12,
@@ -272,7 +272,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "charcoal",
-            "name": "Derwnet Charcoal Pencils",
+            "name": "Charcoal Pencils",
             "company": "Derwent",
             "image": "../../assets/images/pencil/charcoal/derwentCharcoal4set.jpg",
             "collectionSize": 4,
@@ -289,7 +289,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "charcoal",
-            "name": "Derwnet Charcoal Pencils, Metal Set",
+            "name": "Charcoal Pencils, Metal Set",
             "company":"Derwent",
             "image":"../../assets/images/pencil/charcoal/derwentCharcoalMetal6set.jpg",
             "collectionSize": 6,
@@ -306,7 +306,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "charcoal",
-            "name": "General Pencil Charcoal Kit",
+            "name": "Charcoal Kit",
             "company": "General Pencil",
             "image": "../../assets/images/pencil/charcoal/generalPencilCharcoalkit12.jpg",
             "collectionSize": 12,
@@ -323,7 +323,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "charcoal",
-            "name": "General 33-Piece Classic Charcoal Drawing Set",
+            "name": "33-Piece Classic Charcoal Drawing Set",
             "company": "General Pencil",
             "image": "../../assets/images/pencil/charcoal/general33CharcoalDrawingSet.jpg",
             "collectionSize": 33,
@@ -338,7 +338,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "charcoal",
-            "name": "Mont Marte Coloured Charcoal Pencils Set",
+            "name": "Coloured Charcoal Pencils Set",
             "company": "Mont Marte",
             "image": "../../assets/images/pencil/charcoal/montMarteColouredCharcoal.jpg",
             "collectionSize": 12,
@@ -353,7 +353,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "charcoal",
-            "name": "General Pencil Compressed White Charcoal Sticks",
+            "name": "Compressed White Charcoal Sticks",
             "company": "General Pencil",
             "image":"../../assets/images/pencil/charcoal/generalCompressedWhiteCharcoalSticks.jpg",
             "collectionSize": 4,
@@ -367,7 +367,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "charcoal",
-            "name": "Mont Marte Woodless Charcoal Pencils",
+            "name": "Woodless Charcoal Pencils",
             "company":"Mont Marte",
             "image":"../../assets/images/pencil/charcoal/montMarteWoodlessCharcoalPencil.jpg",
             "collectionSize": 3,
@@ -384,7 +384,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "charcoal",
-            "name": "Derwent Tinted Charcoal Pencils 24pcs Metal Tin Set",
+            "name": "Tinted Charcoal Pencils 24pcs Metal Tin Set",
             "company":"Derwent",
             "image":"../../assets/images/pencil/charcoal/derwentCharcoal24MetalTinSet.jpg",
             "collectionSize": 24,
@@ -401,7 +401,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "charcoal",
-            "name": "Derwent Tinted Charcoal Pencils 12pcs Metal Tin Set",
+            "name": "Tinted Charcoal Pencils 12pcs Metal Tin Set",
             "company":"Derwent",
             "image":"../../assets/images/pencil/charcoal/derwentCharcoal12MetalTinSet.jpg",
             "collectionSize": 12,
@@ -418,7 +418,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "charcoal",
-            "name": "Derwent Tinted Charcoal Pencils Set",
+            "name": "Tinted Charcoal Pencils Set",
             "company":"Derwent",
             "image":"../../assets/images/pencil/charcoal/derwentCharcoal6Set.jpg",
             "collectionSize": 6,
@@ -435,7 +435,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "charcoal",
-            "name": "Prismacolor Premier Charcoal Pencils with Erasers, Sharpeners & Blending Stump Set",
+            "name": "Premier Charcoal Pencils with Erasers, Sharpeners & Blending Stump Set",
             "company":"Prismacolor",
             "image":"../../assets/images/pencil/charcoal/prismacolorPremierCharcoalPencilWEraserSharperBlendingStumpSet.jpg",
             "collectionSize": 6,
@@ -452,7 +452,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "colored",
-            "name": "Arteza Colored Pencils with Color Names",
+            "name": "Colored Pencils with Color Names",
             "company":"Arteza",
             "image": "../../assets/images/pencil/color/arteza48CanSet.jpg",
             "collectionSize": 48,
@@ -469,7 +469,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "colored",
-            "name": "Prismacolor Premier Colored Pencils, Manga Colors Set",
+            "name": "Premier Colored Pencils, Manga Colors Set",
             "company": "Prismacolor",
             "image": "../../assets/images/pencil/color/prismacolorMangaColors23Set.jpg",
             "collectionSize": 23,
@@ -486,7 +486,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "colored",
-            "name": "Prismacolor Premier Colored Pencils, Botanical Garden Set",
+            "name": "Premier Colored Pencils, Botanical Garden Set",
             "company": "Prismacolor",
             "image": "../../assets/images/pencil/color/prismacolorPrimierBotanicalGardentSet.jpg",
             "collectionSize": 12,
@@ -503,7 +503,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "colored",
-            "name": "Prismacolor Premier Colored Pencils, Landscape Set",
+            "name": "Premier Colored Pencils, Landscape Set",
             "company": "Prismacolor",
             "image": "../../assets/images/pencil/color/prismacolorPrimierUnderTheSeaSet.jpg",
             "collectionSize": 12,
@@ -520,7 +520,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "colored",
-            "name": "Prismacolor Premier Colored Pencils, Portrait Set",
+            "name": "Premier Colored Pencils, Portrait Set",
             "company": "Prismacolor",
             "image": "../../assets/images/pencil/color/prismacolorPrimierPortraitSet.jpg",
             "collectionSize": 24,
@@ -537,7 +537,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "colored",
-            "name": "Arteza Professional Colored Pencils 72 Set",
+            "name": "Professional Colored Pencils 72 Set",
             "company":"Arteza",
             "image": "../../assets/images/pencil/color/artezaProfessional72Set.jpg",
             "collectionSize": 72,
@@ -554,7 +554,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "colored",
-            "name": "Arteza Professional Colored Pencils 48 Set",
+            "name": "Professional Colored Pencils 48 Set",
             "company":"Arteza",
             "image": "../../assets/images/pencil/color/artezaProfessional48Set.jpg",
             "collectionSize": 48,
@@ -571,7 +571,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "colored",
-            "name": "Arteza Woodless Colored Pencils Set",
+            "name": "Woodless Colored Pencils Set",
             "company":"Arteza",
             "image": "../../assets/images/pencil/color/artezaWoodlessColorSet.jpg",
             "collectionSize": 24,
@@ -584,7 +584,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "colored",
-            "name": "Prismacolor Premier Verithin Colored Pencils 36 Set",
+            "name": "Premier Verithin Colored Pencils 36 Set",
             "company": "Prismacolor",
             "image": "../../assets/images/pencil/color/prismacolorPrimierVeritin36Set.jpg",
             "collectionSize": 36,
@@ -600,7 +600,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "colored",
-            "name": "Prismacolor Premier Verithin Colored Pencils 24 Set",
+            "name": "Premier Verithin Colored Pencils 24 Set",
             "company": "Prismacolor",
             "image": "../../assets/images/pencil/color/prismacolorPrimierVeritin24Set.jpg",
             "collectionSize": 24,
@@ -617,7 +617,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "colored",
-            "name": "Prismacolor Premier Verithin Colored Pencils 12 Set",
+            "name": "Premier Verithin Colored Pencils 12 Set",
             "company": "Prismacolor",
             "image": "../../assets/images/pencil/color/prismacolorPrimierVeritin12Set.jpg",
             "collectionSize": 12,
@@ -634,7 +634,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "water",
-            "name": "Derwent Water Color Pencils 12 Set",
+            "name": "Water Color Pencils 12 Set",
             "company": "Derwent",
             "image":"../../assets/images/pencil/watercolor/derwentWaterColor12Set.jpg",
             "collectionSize": 12,
@@ -651,7 +651,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "water",
-            "name": "Derwent Water Color Pencils 24 Set",
+            "name": "Water Color Pencils 24 Set",
             "company": "Derwent",
             "image":"../../assets/images/pencil/watercolor/derwentWaterColor24Set.jpg",
             "collectionSize": 24,
@@ -668,7 +668,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "water",
-            "name": "Derwent Water Color Pencils 36 Set",
+            "name": "Water Color Pencils 36 Set",
             "company": "Derwent",
             "image":"../../assets/images/pencil/watercolor/derwentWaterColor36Set.jpg",
             "collectionSize": 36,
@@ -685,7 +685,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "water",
-            "name": "Derwent Water Color Pencils 48 Set",
+            "name": "Water Color Pencils 48 Set",
             "company": "Derwent",
             "image":"../../assets/images/pencil/watercolor/derwentWaterColor48Set.jpg",
             "collectionSize": 48,
@@ -702,7 +702,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "water",
-            "name": "Derwent Water Color Pencils 72 Set",
+            "name": "Water Color Pencils 72 Set",
             "company": "Derwent",
             "image":"../../assets/images/pencil/watercolor/derwentWaterColor72Set.jpg",
             "collectionSize": 72,
@@ -719,7 +719,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "water",
-            "name": "Derwent Water Inktense Ink Pencils 6 Set",
+            "name": "Water Inktense Ink Pencils 6 Set",
             "company": "Derwent",
             "image":"../../assets/images/pencil/watercolor/derwentWaterInktenseColor6Set.jpg",
             "collectionSize": 6,
@@ -737,7 +737,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "water",
-            "name": "Derwent Water Inktense Ink Pencils 12 Set",
+            "name": "Water Inktense Ink Pencils 12 Set",
             "company": "Derwent",
             "image":"../../assets/images/pencil/watercolor/derwentWaterInktenseColor12Set.jpg",
             "collectionSize": 12,
@@ -755,7 +755,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "water",
-            "name": "Derwent Water Inktense Ink Pencils 24 Set",
+            "name": "Water Inktense Ink Pencils 24 Set",
             "company": "Derwent",
             "image":"../../assets/images/pencil/watercolor/derwentWaterInktenseColor24Set.jpg",
             "collectionSize": 24,
@@ -773,7 +773,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "water",
-            "name": "Derwent Water Inktense Ink Pencils 36 Set",
+            "name": "Water Inktense Ink Pencils 36 Set",
             "company": "Derwent",
             "image":"../../assets/images/pencil/watercolor/derwentWaterInktenseColor36Set.jpg",
             "collectionSize": 36,
@@ -791,7 +791,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "water",
-            "name": "Derwent Water Inktense Ink Pencils 48 Set",
+            "name": "Water Inktense Ink Pencils 48 Set",
             "company": "Derwent",
             "image":"../../assets/images/pencil/watercolor/derwentWaterInktenseColor48Set.jpg",
             "collectionSize": 48,
@@ -809,7 +809,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "water",
-            "name": "Derwent Water Inktense Ink Pencils 72 Set",
+            "name": "Water Inktense Ink Pencils 72 Set",
             "company": "Derwent",
             "image":"../../assets/images/pencil/watercolor/derwentWaterInktenseColor72Set.jpg",
             "collectionSize": 72,
@@ -827,7 +827,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "water",
-            "name": "Derwent Watercolor Pencils, Metallic Set",
+            "name": "Watercolor Pencils, Metallic Set",
             "company": "Derwent",
             "image":"../../assets/images/pencil/watercolor/derwentWaterColorMetallicSet.jpg",
             "collectionSize": 12,
@@ -843,7 +843,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "water",
-            "name": "Arteza Professional Watercolor Pencils Set",
+            "name": "Professional Watercolor Pencils Set",
             "company": "Arteza",
             "image":"../../assets/images/pencil/watercolor/artezaProfessionalWaterColor72Set.jpg",
             "collectionSize": 72,
@@ -860,7 +860,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "water",
-            "name": "Arteza Woodless Watercolor Pencils Set",
+            "name": "Woodless Watercolor Pencils Set",
             "company": "Arteza",
             "image":"../../assets/images/pencil/watercolor/artezaWoodlessWaterColorPencil24Set.jpg",
             "collectionSize": 24,
@@ -877,7 +877,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "water",
-            "name": "Arteza Triangular-shaped Watercolor Pencils Set",
+            "name": "Triangular-shaped Watercolor Pencils Set",
             "company": "Arteza",
             "image":"../../assets/images/pencil/watercolor/artezaProfessionalWaterColor48Set.jpg",
             "collectionSize": 48,
@@ -894,7 +894,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "accessory",
-            "name": "Arteza Watercolor Painting & Drawing Paper Sketchbooks, 3 Pack Set",
+            "name": "Watercolor Painting & Drawing Paper Sketchbooks, 3 Pack Set",
             "company": "Arteza",
             "image":"../../assets/images/pencil/accessory/artezaWaterColorPaintDrawingPaperSketchBook3Set.jpg",
             "collectionSize": 3,
@@ -910,7 +910,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "accessory",
-            "name": "Bellofy Sketchpad Artist Pro, Watercolor, Acrylic Art Pad for Sketching, Ink Sketch Book, Coloring Notebook",
+            "name": "Sketchpad Artist Pro, Watercolor, Acrylic Art Pad for Sketching, Ink Sketch Book, Coloring Notebook",
             "company": "Bellofy",
             "image":"../../assets/images/pencil/accessory/bellofy100SheetNoteBook.jpg",
             "collectionSize": 1,
@@ -926,7 +926,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "accessory",
-            "name": "Derwent Academy Sketch Pad, Gray, A5, Portrait",
+            "name": "Academy Sketch Pad, Gray, A5, Portrait",
             "company": "Derwent",
             "image":"../../assets/images/pencil/accessory/derwentAcademySketchPadGrayA5.jpg",
             "collectionSize": 1,
@@ -942,7 +942,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "accessory",
-            "name": "Bellofy 9x12-Inch 100 Sheet Sketch Book",
+            "name": "9x12-Inch 100 Sheet Sketch Book",
             "company": "Bellofy",
             "image":"../../assets/images/pencil/accessory/bellofySketchBook9X12100Sheet.jpg",
             "collectionSize": 1,
@@ -958,7 +958,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "accessory",
-            "name": "Bellofy 50 Sheet Watercolor Paper Pad ",
+            "name": "50 Sheet Watercolor Paper Pad ",
             "company": "Bellofy",
             "image":"../../assets/images/pencil/accessory/bellofyWaterPadSeries9x1250Sheets.jpg",
             "collectionSize": 1,
@@ -974,7 +974,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "accessory",
-            "name": "Derwent Academy Sketch Paper Pad, 50 Sheets, 18\" x 12\", Mediumweight",
+            "name": "Academy Sketch Paper Pad, 50 Sheets, 18\" x 12\", Mediumweight",
             "company": "Derwent",
             "image":"../../assets/images/pencil/accessory/derwentAcademySketchPadWhite18x1250Sheet.jpg",
             "collectionSize": 1,
@@ -990,7 +990,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "accessory",
-            "name": "Derwent Academy Drawing Paper Pad, 40 Sheets, 9\" x 12\", Heavyweight ",
+            "name": "Academy Drawing Paper Pad, 40 Sheets, 9\" x 12\", Heavyweight ",
             "company": "Derwent",
             "image":"../../assets/images/pencil/accessory/derwentAcademySketchPadWhite9x1240Sheet.jpg",
             "collectionSize": 1,
@@ -1006,7 +1006,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "accessory",
-            "name": "Prismacolor Premier Pencil Sharpener",
+            "name": "Premier Pencil Sharpener",
             "company": "Prismacolor",
             "image":"../../assets/images/pencil/accessory/prismacolorPencilSharpener.jpg",
             "collectionSize": 1,
@@ -1022,7 +1022,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "accessory",
-            "name": "Derwent Academy Pencil Sharpener & Eraser, 2-In-1",
+            "name": "Academy Pencil Sharpener & Eraser, 2-In-1",
             "company": "Derwent",
             "image":"../../assets/images/pencil/accessory/derwentAcademySharper&Eraser.jpg",
             "collectionSize": 1,
@@ -1038,7 +1038,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "accessory",
-            "name": "Derwent Pencil Case, Canvas Carry-All Bag Pencil Holder with Removable Shoulder Strap, Holds up to 132 Pencils and Supplies",
+            "name": "Pencil Case, Canvas Carry-All Bag Pencil Holder with Removable Shoulder Strap, Holds up to 132 Pencils and Supplies",
             "company": "Derwent",
             "image":"../../assets/images/pencil/accessory/derwentCarryAllStorage132.jpg",
             "collectionSize": 1,
@@ -1054,7 +1054,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "accessory",
-            "name": "Derwent Pencil Case, Canvas Wrap Pencil Holder, Holds up to 30 Pencils and Supplies",
+            "name": "Pencil Case, Canvas Wrap Pencil Holder, Holds up to 30 Pencils and Supplies",
             "company": "Derwent",
             "image":"../../assets/images/pencil/accessory/derwentPencilWrap30.jpg",
             "collectionSize": 1,
@@ -1068,7 +1068,7 @@ App.route('/db/create').get((req, res) =>
         },
         {
             "category": "accessory",
-            "name": "Derwent Pencil Case, Canvas Wrap Pencil Holder, Holds up to 12 Pencils ",
+            "name": "Pencil Case, Canvas Wrap Pencil Holder, Holds up to 12 Pencils ",
             "company": "Derwent",
             "image":"../../assets/images/pencil/accessory/derwentPencilWrap12.jpg",
             "collectionSize": 1,

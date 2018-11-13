@@ -10,11 +10,15 @@ import { Component } from '@angular/core';
 //import the filter component
 import {FilterComponent} from '../filter/filter.component';
 import { Http } from '@angular/http'
+import { RouterOutlet } from '@angular/router';
+import { PageTranstion } from '../animation/pageTransition'; //our custome angular 6 animation
+
 
 @Component
 ({
   selector: 'app-root',
   templateUrl: './main.component.html',
+  animations: [PageTranstion]
 })
 
 export class MainComponent 
@@ -81,5 +85,9 @@ export class MainComponent
       }, 200);
     }
     
-    
+    PrepareRoute(outlet: RouterOutlet)
+    {
+        return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    }
 }
+

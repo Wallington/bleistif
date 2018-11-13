@@ -1,7 +1,7 @@
 /*
 * Author: Sean O'Brien
 * Create Date: 08/270/2018
-* Modify Date: 09/11/2018
+* Modify Date: 11/02/2018
 * Discription: this where load list of only graphite product from db
 */
 
@@ -13,12 +13,12 @@ import
 
 import { Router } from "@angular/router";
 
-import { Http } from '@angular/http'
+import { Http } from '@angular/http';
 
 @Component
 ({
     selector: 'app-feature',
-    templateUrl: 'feature.component.html'
+    templateUrl: 'feature.component.html',
 })
 
 export class FeatureComponent implements OnInit
@@ -41,8 +41,15 @@ export class FeatureComponent implements OnInit
 
             for(let i = 0; i < this.productList.length; i++)
             {
-                this.productList[i].shorten = this.productList[i].name.substr(0, 30);
-                this.productList[i].shorten = this.productList[i].shorten += "...";
+                if(this.productList[i].name.length > 33)
+                {
+                    this.productList[i].shorten = this.productList[i].name.substr(0, 33);
+                    this.productList[i].shorten = this.productList[i].shorten += "...";
+                }
+                else
+                {
+                    this.productList[i].shorten = this.productList[i].name;
+                }
             }
         });
         
@@ -62,8 +69,9 @@ export class FeatureComponent implements OnInit
             
     }
 
-    SendToFullProduct(productIndex)
+    SendToFullProduct(productIndex, index)
     {
+        let targetProduct = document.getElementById("i-" + index );
         this.Router.navigate(['/product', productIndex]);
     }
 }

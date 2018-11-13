@@ -50,8 +50,8 @@
                 </mat-nav-list>
            </div>
     </nav>
-    <article>
-        <router-outlet></router-outlet>
+    <article [@routeAnimations]="PrepareRoute(outlet)">
+        <router-outlet #outlet="outlet"></router-outlet>
     </article>
     <section id="pc">
         <div class="column">

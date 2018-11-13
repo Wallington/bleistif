@@ -446,9 +446,7 @@ mat-grid-tile
 
 #productInfo
 {
-    margin-top: 0px;
     background-color: rgba(255,255,255,.55);
-    height: 100%;
     width: 100%;
 }
 #ImgContainer 
@@ -467,6 +465,35 @@ mat-grid-tile
     padding-left: 12px;
     padding-right: 12px;
 }
+div#productDiscription > div
+{
+    padding-bottom: 5px;
+}
+#actionBar
+{
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 20px;
+    color: white;
+}
+#slideShowActionBar
+{
+    color: white;
+    font-size: 8px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+#slideShowActionBar > i
+{
+    padding-left: 5px;
+}
+.mat-figure > img
+{
+    height: 100%;
+}
+
+
 
 /***********************************
 *   Custom Animation CSS
@@ -538,11 +565,6 @@ mat-grid-tile
     {
         left: 0;
     }
-}
-
-@keyframes CardExpand
-{
-    
 }
 
 /*************************************
