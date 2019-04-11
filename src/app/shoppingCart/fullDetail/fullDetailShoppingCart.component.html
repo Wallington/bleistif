@@ -1,0 +1,99 @@
+<div class="skirt" [ngClass]="skirtClass">
+    <div id="fullDetailShoppingCart" [ngClass]="cartClass">
+        <section >
+            <section class="row fx-100">
+                <button mat-icon-button (click)="ToggleFullCart()"><i class="fas fa-angle-right"></i></button>
+                <h3>CART</h3>
+                <div class="fx-auto"></div>
+                <i class="fas fa-shopping-cart"></i> 
+            </section>
+            <mat-toolbar color="primary">
+                <h2>Current</h2>
+                <span class="fx-auto"></span>
+                <h3>{{cartItems.length}} Items</h3>
+            </mat-toolbar>
+            <h3 *ngIf="cartItems.length == 0">Sorry, dont have any product in your cart</h3>
+            <div class="productHolder">
+                <div class="product fx-100 row" *ngFor="let item of cartItems">
+                    <aside>
+                        <button mat-icon-button><i class="fas fa-minus-circle"></i></button>
+                    </aside>
+                    <div class="productImg">
+                        <img [src]="item.image">
+                    </div>
+                    <div class="column fx-auto">
+                        <div class="row fx-left ">
+                            <div class="companyName">
+                                {{item.company}}
+                            </div>
+                            <div class="productPrice">
+                                {{item.price * item.quantity | currency}}
+                            </div>
+                        </div>
+                        <div class="row fx-left">
+                            <div class="productName" matTooltip="{{item.name}}">
+                                {{item.shorten}}
+                            </div>
+                            
+                        </div>
+                        <div class="row quantity fx-left">
+                                <button mat-icon-button><i class="fas fa-minus"></i></button>
+                                <div>{{item.quantity}}</div>
+                                <button mat-icon-button><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="column fx-100">
+                    <div class="row">
+                        <div class="fx-50" style="line-height: 2">
+                            <h4>Total</h4>
+                        </div>
+                        <div class="fx-50 fx-text-end">
+                            <h2>{{total | currency}}</h2>
+                        </div>
+                    </div>
+                    <div id="subCost">
+                        <div class="row">
+                            <div class="fx-50">
+                                <p>Sub Total</p>
+                            </div>
+                            <div class="fx-50 fx-text-end">
+                                <p>{{subTotal | currency}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="fx-50">
+                                <p>Shipping</p>
+                            </div>
+                            <div class="fx-50 fx-text-end">
+                                <p>{{shippingTotal | currency}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="fx-50">
+                                <p>Tax</p>
+                            </div>
+                            <div class="fx-50 fx-text-end">
+                                <p>{{taxTotal | currency}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="processBtn">
+                <button color="accent" mat-raised-button>Proceed Check Out</button>
+            </div>
+            <mat-toolbar color="primary">
+                <h2>Saved Products</h2>
+                <span class="fx-auto"></span>
+                <h3>{{saveProducts.length}} Items</h3>
+            </mat-toolbar>
+            <h3 *ngIf="saveProducts.length == 0">Sorry, dont have any product in your saved</h3>
+            <div class="productHolder">
+                
+            </div>
+        </section>
+    </div>
+</div>

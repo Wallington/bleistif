@@ -2,7 +2,7 @@
 /***********************
  *  Author Sean O'Brien
  *  Create Date: 08/29/2018
- *  Modifcation Date: 08/29/2018
+ *  Modifcation Date: 03/10/2019
  *  Discription: this run our connection to the database using express and mongo DB
  ************************/
 
@@ -60,9 +60,11 @@ App.route('/db/test/').get((req,res) =>
 {
     console.log('testing console.');
 });
+
+
 App.route('/db/create').get((req, res) =>
 {
-    //JSON of each product from Amazon Store
+    //JSON of each product from Amazon Store Data
     var products = 
     [
         {

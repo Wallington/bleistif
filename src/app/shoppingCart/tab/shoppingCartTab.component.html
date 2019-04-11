@@ -1,0 +1,49 @@
+<section id="pc" *ngIf="isPCView">
+    <div class="column">
+        <div>
+            <button mat-icon-button (click)="FilService.Toggle()"><i class="fas fa-sliders-h"></i></button>
+        </div>
+        <span class="fx-auto"></span>
+        <div class="shoppingCartTabItems column">
+            <app-slot [isHidden]="slot4.isHidden" [isGroupCounter]="true" [setCount]="slot4.counter" [viewMode]="isPCView"></app-slot>
+            <app-slot [isHidden]="slot1.isHidden" [productImg]="slot1.src" [viewMode]="isPCView"></app-slot>
+            <app-slot [isHidden]="slot2.isHidden" [productImg]="slot2.src" [viewMode]="isPCView"></app-slot>
+            <app-slot [isHidden]="slot3.isHidden" [productImg]="slot3.src" [viewMode]="isPCView"></app-slot>
+            
+            
+        </div>
+        <div>
+            <div class="row shoppingCartTabContainer" (click)="OpenFullDetailCart()">
+               
+                    <div class="shoppingCartTabCorner" >
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</section>
+<section id="mobile" *ngIf="!isPCView">
+    <div class="row">
+        <div>
+            <button mat-icon-button (click)="FilService.Toggle()"><i class="fas fa-sliders-h"></i></button>
+        </div>
+        <span class="fx-auto"></span>
+        <div id="shoppingCartTabCore" class="shoppingCartTabItems row">
+            <app-slot [isHidden]="slot4.isHidden" [isGroupCounter]="true" [setCount]="slot4.counter" [viewMode]="isPCView"></app-slot>
+            <app-slot [isHidden]="slot1.isHidden" [productImg]="slot1.src" [viewMode]="isPCView"></app-slot>
+            <app-slot [isHidden]="slot2.isHidden" [productImg]="slot2.src" [viewMode]="isPCView"></app-slot>
+            <app-slot [isHidden]="slot3.isHidden" [productImg]="slot3.src" [viewMode]="isPCView"></app-slot>
+        </div>
+        <div>
+            <div class="row shoppingCartTabContainer" (click)="OpenFullDetailCart()">
+                <div class="shoppingCartTabCorner">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</section>

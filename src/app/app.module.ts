@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { appRouting } from './app.router';
 import { HttpModule } from '@angular/http';
 
+
 //google material component module
 import 
 { 
@@ -18,7 +19,8 @@ import
   MatSliderModule,
   MatGridListModule,
   MatRippleModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatMenuModule
 } from "@angular/material";
 
 // import any pages components
@@ -33,7 +35,13 @@ import { AccessoryComponent } from './accessory/accessory.component';
 //import component
 import { FilterComponent } from './filter/filter.component';
 import { FilterProductDisplayComponent } from './filterProductDisplay/filterProductDisplay.component';
-import { ShoppingCartComponent } from './shoppingCart/shoppingCart.component';
+import { FullDetailShoppingCartComponent } from './shoppingCart/fullDetail/fullDetailShoppingCart.component';
+import { ShoppingCartTabComponent } from './shoppingCart/tab/shoppingCartTab.component';
+import { SlotComponent } from './shoppingCart/tab/slot/slot.component';
+import { CounterComponent } from './counter/counter.component';
+
+//import API
+import { ShoppingCartService } from './api/api.shoppingCart'
 
 @NgModule
 ({
@@ -49,7 +57,10 @@ import { ShoppingCartComponent } from './shoppingCart/shoppingCart.component';
     WaterColoredComponent,
     AccessoryComponent,
     FilterProductDisplayComponent,
-    ShoppingCartComponent
+    FullDetailShoppingCartComponent,
+    ShoppingCartTabComponent,
+    SlotComponent,
+    CounterComponent
   ],
   imports: 
   [
@@ -67,7 +78,8 @@ import { ShoppingCartComponent } from './shoppingCart/shoppingCart.component';
     MatSliderModule,
     MatGridListModule,
     MatRippleModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatMenuModule
   ],
   exports:
   [ //also any google materail must also be export as well as import
@@ -80,13 +92,17 @@ import { ShoppingCartComponent } from './shoppingCart/shoppingCart.component';
     MatSliderModule,
     MatGridListModule,
     MatRippleModule,
-    MatTooltipModule
+    MatTooltipModule,
+    ShoppingCartTabComponent,
+    MatMenuModule
   ],
   providers: 
   [
     FilterComponent,
     FilterProductDisplayComponent,
-    ShoppingCartComponent
+    FullDetailShoppingCartComponent,
+    ShoppingCartTabComponent,
+    ShoppingCartService
   ],
   bootstrap: [MainComponent]
 })

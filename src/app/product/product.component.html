@@ -1,13 +1,13 @@
-<div id="productInfo" *ngFor="let product of productList">
+<div id="productInfo" >
     
     <div id="ImgContainer" class="column">
         <div class="row" id="actionBar">
             <button mat-icon-button><i class="fas fa-times"></i></button>
             <div class="fx-auto"></div>
-            <button mat-icon-button><i class="fas fa-cart-plus"></i></button>
+            <button mat-icon-button [matMenuTriggerFor]="quantity"><i class="fas fa-cart-plus"></i></button>
             <button mat-icon-button><i class="far fa-heart"></i></button>
         </div>
-        <img [src]="product.image">
+        <img [src]="productItem.image">
          <div class="row">
               
               <div class="fx-auto"></div>
@@ -21,18 +21,31 @@
     <div id="productContent">
         <div class="row" >
             <div>
-                <h5 style="line-height: 3;">{{product.company}}</h5>
+                <h5 style="line-height: 3;">{{productItem.company}}</h5>
             </div>
             <div class="fx-auto"></div>
             <div>
-                <h2>{{product.price | currency}}</h2>
+                <h2>{{productItem.price | currency}}</h2>
             </div>
         </div>
         <div class="column">
-            <h1>{{product.name}}</h1>
+            <h1>{{productItem.name}}</h1>
         </div>
-        <div class="column" id="productDiscription" *ngFor="let discription of product.discription">
+        <div class="column" id="productDiscription" *ngFor="let discription of productItem.discription">
             <div>{{discription}}</div>
         </div>
     </div>
 </div>
+<mat-menu #quantity="matMenu">
+        <div style="padding: 5px;">
+            <div class="row quantity" style="justify-content: center;">
+                    <button mat-icon-button (click)="$event.stopPropagation(); Dec();"><i class="fas fa-minus"></i></button>
+                    <div (click)="$event.stopPropagation();"><app-counter [count]="quantityCount"></app-counter></div>
+                    <button mat-icon-button (click)="$event.stopPropagation(); Add();"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="column fx-center">
+                <button mat-raised-button color="accent" (click)="AddToCartTab()">Add To Cart</button>
+            </div>
+        </div>
+        
+</mat-menu>

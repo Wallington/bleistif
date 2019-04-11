@@ -82,7 +82,7 @@ const appRoutes: Routes =
         }
     },
     {
-        path: 'filter/:data',
+        path: 'filter',
         component: FilterProductDisplayComponent
     }
 ];

@@ -8,7 +8,7 @@
 import { Component } from '@angular/core';
 
 //import the filter component
-import {FilterComponent} from '../filter/filter.component';
+
 import { Http } from '@angular/http'
 import { RouterOutlet } from '@angular/router';
 import { PageTranstion } from '../animation/pageTransition'; //our custome angular 6 animation
@@ -26,7 +26,6 @@ export class MainComponent
     //creating varbales from exist other components
     constructor
     (
-      public Filter : FilterComponent,
       public HTTP: Http
     ){}
 
@@ -58,7 +57,8 @@ export class MainComponent
        }
     ]
     isMenuOpen: boolean = false;
-    
+    isPCMode: boolean = (window.innerWidth >= 1080) ? true: false;
+
     TogglePhoneMenu()
     {
       let mainElem = document.getElementById('main');

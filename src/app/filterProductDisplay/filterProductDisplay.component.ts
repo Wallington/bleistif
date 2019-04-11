@@ -1,7 +1,7 @@
 /*
 * Author: Sean O'Brien
 * Create Date: 09/04/2018
-* Modify Date: 09/11/2018
+* Modify Date: 04/10/2019
 * Discription: this where load list from user selection
 */
 
@@ -14,10 +14,10 @@ import
 
 import 
 {
-    Router,
-    ActivatedRoute
+    Router
 } from '@angular/router';
 
+import { FilterService } from '../api/api.filter';
 
 @Component
 ({
@@ -33,13 +33,17 @@ export class FilterProductDisplayComponent implements OnInit, DoCheck
     constructor
     (
         private Router: Router,
-        private route: ActivatedRoute
+        private Service: FilterService
     ){}
 
     ngOnInit()
     {
         //this run the first time filter feed.
-        this.productList = JSON.parse( this.route.snapshot.paramMap.get('data'));
+        if(Object.entries(this.Service.filterData.value).length != 0)
+        {
+            this.productList = this.Service.filterData.value;
+            this.Service.filterData.next({});
+        }
 
         for(let i = 0; i < this.productList.length; i++)
         {
@@ -58,7 +62,12 @@ export class FilterProductDisplayComponent implements OnInit, DoCheck
     ngDoCheck()
     {
         //this do check if data was change after ngInit was first ran
-        this.productList = JSON.parse( this.route.snapshot.paramMap.get('data'));
+        if(Object.entries(this.Service.filterData.value).length != 0)
+        {
+            this.productList = this.Service.filterData.value;
+            this.Service.filterData.next({});
+        }
+
         for(let i = 0; i < this.productList.length; i++)
         {
             if(this.productList[i].name.length > 33)

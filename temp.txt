@@ -1,0 +1,24 @@
+{
+                "category": "graphite",
+                "name" : "Mars Lumograph Set",
+                "company": "Staedtler",
+                "image": "../../assets/images/pencil/graphite/staedtlerMarsLumographSet.jpg",
+                "price": 14.47,
+                "quantity": 1
+            },
+            {
+                "category": "graphite",
+                "name" : "Graphic Pencils Hard Set",
+                "company": "Derwent",
+                "image": "../../assets/images/pencil/graphite/derwentGraphicHardSet.jpg",
+                "price": 14.63,
+                "quantity": 2
+            },
+            {
+                "category": "graphite",
+                "name": "Graphic Drawing Pencils Full Range Set",
+                "company": "Derwent",
+                "image": "../../assets/images/pencil/graphite/derwentGraphicFullRangeSet.jpg",
+                "price": 29.47,
+                "quantity": 1
+            }

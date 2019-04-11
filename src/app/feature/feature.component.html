@@ -1,5 +1,5 @@
 <mat-grid-list cols="{{colSize}}" gutterSize="8px" rowHeight="1:1">
-        <mat-grid-tile *ngFor="let product of productList; let i = index" matRipple  (click)="SendToFullProduct(product._id)" id="i-{{i}}">       
+        <mat-grid-tile *ngFor="let product of productList;" matRipple  (click)="SendToFullProduct(product._id)">       
             <img [src]="product.image">
             <mat-grid-tile-footer>
                 <div class="column fx-100">

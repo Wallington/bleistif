@@ -23,13 +23,13 @@ import
 export const PageTranstion = 
 trigger('routeAnimations',
 [
-    transition('* => feature', //* = last page user was on then will go to feature will transition
+    /*transition('* => feature', //* = last page user was on then will go to feature will transition
     [
         style
         ({
             position: 'relative'
         }),
-        query(':enter, :leave',
+        query(':enter, :leave', 
         [
             style
             ({
@@ -274,9 +274,5 @@ trigger('routeAnimations',
             ])
         ]),
         query(':enter', animateChild()),
-    ]),
-    transition('* => product', //* = last page user was on then will go to accessory will transition
-    [
-        
-    ]),
+    ])*/
 ]);

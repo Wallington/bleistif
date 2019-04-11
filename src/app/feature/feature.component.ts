@@ -69,9 +69,8 @@ export class FeatureComponent implements OnInit
             
     }
 
-    SendToFullProduct(productIndex, index)
+    SendToFullProduct(productIndex)
     {
-        let targetProduct = document.getElementById("i-" + index );
         this.Router.navigate(['/product', productIndex]);
     }
 }

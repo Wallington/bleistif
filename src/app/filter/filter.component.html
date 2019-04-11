@@ -1,50 +1,62 @@
-<section id="filter">
-        <div id="filterContent">
-            <mat-toolbar>
-                <mat-toolbar-row>
-                        <button id="navButton" mat-icon-button (click)="Close()" ><i class="fas fa-times"></i></button>
-                        <h3>Filter</h3>
-                        <span class="fx-auto"></span>
-                        <i class="fas fa-sliders-h"></i> 
-                        
-                </mat-toolbar-row>
+<div class="skirt" [ngClass]="skirtClass" >
+    <section id="filter" [ngClass]="filterClass">
+        <section>
+            <mat-toolbar color="primary">
+                <button mat-icon-button (click)="ToggleFilter()"><i class="fas fa-times"></i></button>
+                <h3>Filter</h3>
+                <div class="fx-auto"></div>
+                <i class="fas fa-sliders-h"></i> 
             </mat-toolbar>
-            <div class="group">
-                <h4>Category</h4>
-            
-                <mat-chip-list>
-                    <mat-basic-chip *ngFor="let category of categoryList; let i = index;" [class.selected]="categoryList[i].selected" (click)="UpdateCategoryQuery(i)" >
-                        {{category.name}}
-                    </mat-basic-chip>
-                </mat-chip-list>
-            </div>
-            <div class="group">
-                <div class="row">
-                    <h4>Budget Range <b>$0.00 - {{maxPriceLimit | currency}}</b></h4>
+            <section class="group">
+                <mat-toolbar color="primary">
+                    <h4>Category</h4>
+                </mat-toolbar>
+                <div>
+                    <mat-chip-list>
+                        <mat-basic-chip *ngFor="let category of categoryList; let i = index;" [class.selected]="categoryList[i].selected" (click)="UpdateCategoryQuery(i)" >
+                            {{category.name}}
+                        </mat-basic-chip>
+                    </mat-chip-list>
                 </div>
-                <mat-slider [(ngModel)]="maxPriceLimit" [max]="200" [step]="10" min="0" (change)="UpdateResult()"></mat-slider>
+            </section>
+            <section class="group">
+                <mat-toolbar color="primary">
+                    <h4>Budget Range </h4>
+                </mat-toolbar>
+                <div>
+                    <h3 style="line-height:3;"><b>$0.00 - {{maxPriceLimit | currency}}</b></h3>
+                    <mat-slider class="fx-auto" [(ngModel)]="maxPriceLimit" [max]="200" [step]="10" min="0" (change)="UpdateResult()"></mat-slider>
+                </div>
+            </section>
+            <section class="group">
+                <mat-toolbar color="primary">
+                    <h4>Max Set Size Range (1 to {{maxSetRange}})</h4>
+                </mat-toolbar>
+                <div>
+                    <mat-chip-list>
+                        <mat-basic-chip *ngFor="let size of productSetRangeList; let i = index" [class.selected]="productSetRangeList[i].selected" (click)="UpdateMaxSetRange(i)" >
+                            {{size.name}}
+                        </mat-basic-chip>
+                        
+                    </mat-chip-list>
+                </div>
+            </section>
+            <section class="group">
+                <mat-toolbar color="primary">
+                    <h4>Product Brands</h4>
+                </mat-toolbar>
+                <div>
+                    <mat-chip-list>
+                        <mat-basic-chip *ngFor="let brand of productBrandList; let i = index" [class.selected]="productBrandList[i].selected" (click)="UpdateBrandQuery(i)"> 
+                            {{brand.name}}
+                        </mat-basic-chip>
+                        
+                    </mat-chip-list>
+                </div>
+            </section>
+           <div class="row">
+                <button class="fx-100" mat-raised-button color="accent" (click)="ShowResultPage()">Show {{showResult}} Results </button>
             </div>
-            <div class="group">
-                <h4>Max Set Size Range 1 - {{maxSetRange}}</h4>
-                <mat-chip-list>
-                    <mat-basic-chip *ngFor="let size of setRangeList; let i = index" [class.selected]="setRangeList[i].selected" (click)="UpdateMaxSetRange(i)" >
-                        {{size.name}}
-                    </mat-basic-chip>
-                    
-                </mat-chip-list>
-            </div>
-            
-            <div class="group">
-                <h4>Brand</h4>
-                <mat-chip-list>
-                    <mat-basic-chip *ngFor="let brand of brandList; let i = index" [class.selected]="brandList[i].selected" (click)="UpdateBrandQuery(i)"> 
-                        {{brand.name}}
-                    </mat-basic-chip>
-                    
-                </mat-chip-list>
-            </div>
-            <div class="row">
-                <button mat-raised-button color="accent" (click)="ShowResultPage()">Show {{showResult}} Results </button>
-            </div>
-        </div>
+        </section>
     </section>
+</div>

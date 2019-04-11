@@ -53,45 +53,10 @@
     <article [@routeAnimations]="PrepareRoute(outlet)">
         <router-outlet #outlet="outlet"></router-outlet>
     </article>
-    <section id="pc">
-        <div class="column">
-            <div>
-                <button mat-icon-button (click)="Filter.Open()"><i class="fas fa-sliders-h"></i></button>
-            </div>
-            <span class="fx-auto"></span>
-            <div>
-                <div class="row shoppingCartTabContainer">
-                    <div class="shoppingCartTabCorner">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </div>
-                <div class="shoppingCartTabItems">
-                    
-                </div>
-            </div>
-        </div>
-    </section>
+    <app-shoppingCartTab *ngIf="isPCMode"></app-shoppingCartTab>
     
     
 </main>
-<section id="mobile">
-        <div class="row">
-            <div class="fx-50" >
-                <button mat-icon-button (click)="Filter.Open()"><i class="fas fa-sliders-h"></i></button>
-            </div>
-            <div class="fx-50" >
-                <div class="row fx-flex-end">
-                    <div class="row shoppingCartTabContainer">
-                        <div class="shoppingCartTabCorner">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                    </div>
-                    <div class="shoppingCartTabItems">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<app-shoppingCartTab *ngIf="!isPCMode"></app-shoppingCartTab>
 <app-filter></app-filter>
-<app-shoppingCart></app-shoppingCart>
+<app-fullDetailShoppingCart></app-fullDetailShoppingCart>
