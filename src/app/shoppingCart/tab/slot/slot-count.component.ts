@@ -10,23 +10,20 @@ import
 
 @Component
 ({
-    selector: 'app-slot',
+    selector: 'app-slot-count',
     template:
     `
     <div [ngClass]="class">
-        <img *ngIf="!isCounter" [src]="slotImage">
-        <div *ngIf="isCounter">{{slotCount}}+</div>
+        <div>{{slotCount}}+</div>
     </div>
     
     `
 })
 
-export class SlotComponent 
+export class SlotCountComponent 
 {
 
     private isSlotHidden: boolean = false;
-    private isCounter: boolean = false;
-    private slotImage: string = 'null';
     private slotCount: number = 0;
     private class = '';
 
@@ -37,32 +34,14 @@ export class SlotComponent
         this.class = 'slot';
         this.class += (this.isSlotHidden) ? ' fx-hidden': ' fx-show';
         this.class += (this.viewMode) ? ' column' : ' row';
-        
-    };
-
-    @Input() 
-    set productImg(productImg: string)
-    {
-        this.slotImage = productImg;
     };
 
     @Input()
-    set counter(count: number)
+    set count(count: number)
     {
         this.slotCount = count;
     };
 
-    @Input() 
-    set isGroupCounter(countMode: boolean)
-    {
-        this.isCounter = countMode;
-    };
-
-    @Input()
-    set setCount(count: number)
-    {
-        this.slotCount = count;
-    };
 
     @Input() viewMode: boolean;
 

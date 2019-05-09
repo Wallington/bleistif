@@ -137,4 +137,27 @@ export class FullDetailShoppingCartComponent implements OnInit, DoCheck
             this.skirtClass = (this.isOpen) ? 'fx-show' : 'fx-hidden';
         }, (this.isOpen) ? 513 : 348);
     }
+
+    Plus(index)
+    {
+        this.cartItems[index].quantity++ ;
+        this.Update();
+    }
+
+    Min(index)
+    {
+        if(this.cartItems[index].quantity > 1)
+            this.cartItems[index].quantity--;
+        this.Update();
+    }
+
+    RemoveFromCart(index)
+    {
+       this.cartItems.splice(index, 1);
+       this.Update();
+       this.Service.UpdateCart(this.cartItems);
+       this.Service.CartHasBeenEdit();
+    }
+
+    
 }

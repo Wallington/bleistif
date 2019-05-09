@@ -70,6 +70,11 @@ export class ProductComponent implements OnInit
         this.productItem['quantity'] = this.quantityCount;
         this.ShopService.AddToCart(this.productItem);
     }
+
+    Back()
+    {
+        window.history.back();
+    }
     
     
 }

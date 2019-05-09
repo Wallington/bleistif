@@ -20,7 +20,9 @@ import
   MatGridListModule,
   MatRippleModule,
   MatTooltipModule,
-  MatMenuModule
+  MatMenuModule,
+  MatFormFieldModule,
+  MatInputModule
 } from "@angular/material";
 
 // import any pages components
@@ -32,16 +34,22 @@ import { FeatureComponent } from './feature/feature.component';
 import { ColoredComponent } from './colored/colored.component';
 import { WaterColoredComponent } from './waterColored/waterColored.component';
 import { AccessoryComponent } from './accessory/accessory.component';
+
 //import component
 import { FilterComponent } from './filter/filter.component';
 import { FilterProductDisplayComponent } from './filterProductDisplay/filterProductDisplay.component';
 import { FullDetailShoppingCartComponent } from './shoppingCart/fullDetail/fullDetailShoppingCart.component';
 import { ShoppingCartTabComponent } from './shoppingCart/tab/shoppingCartTab.component';
-import { SlotComponent } from './shoppingCart/tab/slot/slot.component';
+import { SlotImageComponent } from './shoppingCart/tab/slot/slot-image.component';
+import { SlotCountComponent } from './shoppingCart/tab/slot/slot-count.component';
 import { CounterComponent } from './counter/counter.component';
+import { SignInComponent } from './auth/signIn/signIn.component';
+import { ProductListItem } from './shoppingCart/fullDetail/productListItem/productListItem';
 
 //import API
-import { ShoppingCartService } from './api/api.shoppingCart'
+import { ShoppingCartService } from './api/api.shoppingCart';
+import { FilterService } from './api/api.filter';
+import { AuthService } from './api/api.auth';
 
 @NgModule
 ({
@@ -59,8 +67,11 @@ import { ShoppingCartService } from './api/api.shoppingCart'
     FilterProductDisplayComponent,
     FullDetailShoppingCartComponent,
     ShoppingCartTabComponent,
-    SlotComponent,
-    CounterComponent
+    SlotCountComponent,
+    SlotImageComponent,
+    CounterComponent,
+    SignInComponent,
+    ProductListItem
   ],
   imports: 
   [
@@ -79,7 +90,9 @@ import { ShoppingCartService } from './api/api.shoppingCart'
     MatGridListModule,
     MatRippleModule,
     MatTooltipModule,
-    MatMenuModule
+    MatMenuModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   exports:
   [ //also any google materail must also be export as well as import
@@ -94,7 +107,9 @@ import { ShoppingCartService } from './api/api.shoppingCart'
     MatRippleModule,
     MatTooltipModule,
     ShoppingCartTabComponent,
-    MatMenuModule
+    MatMenuModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: 
   [
@@ -102,7 +117,9 @@ import { ShoppingCartService } from './api/api.shoppingCart'
     FilterProductDisplayComponent,
     FullDetailShoppingCartComponent,
     ShoppingCartTabComponent,
-    ShoppingCartService
+    ShoppingCartService,
+    AuthService,
+    FilterService
   ],
   bootstrap: [MainComponent]
 })

@@ -72,6 +72,11 @@ html, body
 {
     justify-content: flex-start;
 }
+.fx-vertical-align
+{
+    align-items: center;
+    align-content: center;
+}
 
 .fx-hidden
 {
@@ -216,23 +221,25 @@ html, body
 
 
 /*************************************
-*   Log In CSS
+*   Sign In CSS
 **************************************/
-
-#log
+#signin
 {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: $mainColor;
+    top: 0;
+    padding: 15px;
+}
+#signin > div
+{
+    align-items: center;
     justify-content: center;
-    
-    text-align: center;
-}
-#log > h1
-{
-    position: relative;
-    top: -60px;
-}
+    height: 100vh;
 
-#log > svg
+}
+#signin > div >  svg
 {
     background-image: url('./assets/images/pencil.svg');
     background-position: center;
@@ -241,10 +248,35 @@ html, body
     -moz-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     background-size: 100px;
-    width: 150px;
-    height: 150px;
-    padding-top: 80px;
+    width: 100px;
+    height: 100px;
 
+}
+#signin > div > h1
+{
+    position: relative;
+    
+    
+}
+
+.group
+{
+    box-shadow: 0px .5px 2px 0px rgba(0, 0, 0, 0.26);
+    margin-bottom: 10px;
+}
+.group > div
+{
+    background-color: rgba(255,255,255,.20);
+    padding: 5px;
+    display: flex;
+}
+mat-form-field.mat-form-field
+{
+   font-size: 15px;
+}
+input:-internal-autofill-previewed, input:-internal-autofill-selected, textarea:-internal-autofill-previewed, textarea:-internal-autofill-selected, select:-internal-autofill-previewed, select:-internal-autofill-selected 
+{
+    background-color: $mainColor !important;
 }
 
 /**********************************
@@ -340,6 +372,7 @@ mat-basic-chip:active, mat-basic-chip:hover
     background-color: $mainColor;
     display: block;
     height: 100%;
+    width: 100vw;
 }
 .skirt
 {
@@ -358,31 +391,21 @@ mat-basic-chip:active, mat-basic-chip:hover
     height: 100%;
     
 }
-
-#fullDetailShoppingCart > section > section > h3 
+#fullDetailShoppingCart > section > mat-toolbar
 {
-    line-height: 2.5;
-    margin-right: 10px;
+    margin-bottom: 10px;
 }
-#fullDetailShoppingCart > section > section > i
+#fullDetailShoppingCart > section > .group > div > h3
 {
-    line-height: 3;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
 }
-
-.product
+.productItem
 {
     border-bottom: 1px solid rgba(0, 0, 0, .12);
-    padding-top: 5px;
-    padding-bottom: 5px;
+    margin-bottom: 2px;
 }
-
-.product > aside 
-{
-    display: flex;
-    align-items: center;
-    width: 50px;
-}
-
 .productImg 
 {
     width: 75px;
@@ -395,6 +418,12 @@ mat-basic-chip:active, mat-basic-chip:hover
     height: auto;
     max-width: 75x;
     height: 75px;
+}
+.productRemover
+{
+    display: flex;
+    align-items: center;
+    width: 50px;
 }
 
 .companyName
@@ -416,13 +445,6 @@ mat-basic-chip:active, mat-basic-chip:hover
 #subCost
 {
     line-height: .5;
-}
-
-#processBtn > button
-{
-    margin-top: 5px;
-    width: 100%;
-    margin-bottom: 10px;
 }
 
 
@@ -451,14 +473,14 @@ mat-basic-chip:active, mat-basic-chip:hover
     margin-right: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
-    align-items: center;
-    justify-content: center;
+    height: 45px;
+    width: 45px;
 }
 .slot.column
 {
     margin-bottom: 5px;
-    align-items: center;
-    justify-content: center;
+    height: 45px;
+    width: 45px;
 }
 .slot > img
 {
@@ -468,7 +490,14 @@ mat-basic-chip:active, mat-basic-chip:hover
     max-width: 45px;
     max-height: 45px;
 }
-
+.slot > div
+{
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+}
 
 /**********************************
 *   Custom product item
@@ -581,6 +610,76 @@ div#productDiscription > div
         transform: rotate(180deg);
         -moz-transform: rotate(180deg);
         -webkit-transform: rotate(180deg);
+    }
+}
+
+@keyframes OpenAuthPC
+{
+    from
+    {
+        right: 100vw;
+    }
+    to
+    {
+        right: 73vw;
+    }
+
+}
+@keyframes CloseAuthPC
+{
+    from
+    {
+        right: 73vw;
+    }
+    to
+    {
+        right: 100vw;
+        display: none;
+    }
+
+}
+@keyframes OpenAuthTablet
+{
+    from
+    {
+        left: 100vw;
+    }
+    to
+    {
+        left: 51vw;
+    }
+}
+@keyframes CloseAuthTablet
+{
+    from
+    {
+        right: 51vw;
+    }
+    to
+    {
+        right: 100vw;
+    }
+}
+@keyframes OpenAuthPhone
+{
+    from
+    {
+        right: 100vw;
+    }
+    to
+    {
+        right: 0vw;
+    }
+}
+@keyframes CloseAuthPhone
+{
+    from
+    {
+        right: 0vw;
+    }
+    to
+    {
+        right: 100vw;
     }
 }
 
@@ -1157,6 +1256,13 @@ div#productDiscription > div
         animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
     }
 
+    #signin
+    {
+        width: 45vw;
+        right:  51vw;
+    }
+    
+
 }
 
 /**************************************
@@ -1340,6 +1446,12 @@ div#productDiscription > div
         animation-name: CloseFullCartDetailPC;
         animation-duration: 350ms;
         animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+
+    #signin
+    {
+        width: 25vw;
+        right:  73vw;
     }
 
 }

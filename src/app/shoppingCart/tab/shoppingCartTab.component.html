@@ -5,10 +5,10 @@
         </div>
         <span class="fx-auto"></span>
         <div class="shoppingCartTabItems column">
-            <app-slot [isHidden]="slot4.isHidden" [isGroupCounter]="true" [setCount]="slot4.counter" [viewMode]="isPCView"></app-slot>
-            <app-slot [isHidden]="slot1.isHidden" [productImg]="slot1.src" [viewMode]="isPCView"></app-slot>
-            <app-slot [isHidden]="slot2.isHidden" [productImg]="slot2.src" [viewMode]="isPCView"></app-slot>
-            <app-slot [isHidden]="slot3.isHidden" [productImg]="slot3.src" [viewMode]="isPCView"></app-slot>
+            <app-slot-count [isHidden]="slot4.isHidden" [count]="slot4.counter" [viewMode]="isPCView"></app-slot-count>
+            <app-slot-image [isHidden]="slot1.isHidden" [productImg]="slot1.src" [viewMode]="isPCView"></app-slot-image>
+            <app-slot-image [isHidden]="slot2.isHidden" [productImg]="slot2.src" [viewMode]="isPCView"></app-slot-image>
+            <app-slot-image [isHidden]="slot3.isHidden" [productImg]="slot3.src" [viewMode]="isPCView"></app-slot-image>
             
             
         </div>
@@ -31,10 +31,10 @@
         </div>
         <span class="fx-auto"></span>
         <div id="shoppingCartTabCore" class="shoppingCartTabItems row">
-            <app-slot [isHidden]="slot4.isHidden" [isGroupCounter]="true" [setCount]="slot4.counter" [viewMode]="isPCView"></app-slot>
-            <app-slot [isHidden]="slot1.isHidden" [productImg]="slot1.src" [viewMode]="isPCView"></app-slot>
-            <app-slot [isHidden]="slot2.isHidden" [productImg]="slot2.src" [viewMode]="isPCView"></app-slot>
-            <app-slot [isHidden]="slot3.isHidden" [productImg]="slot3.src" [viewMode]="isPCView"></app-slot>
+            <app-slot-count [isHidden]="slot4.isHidden" [count]="slot4.counter" [viewMode]="isPCView"></app-slot-count>
+            <app-slot-image [isHidden]="slot1.isHidden" [productImg]="slot1.src" [viewMode]="isPCView"></app-slot-image>
+            <app-slot-image [isHidden]="slot2.isHidden" [productImg]="slot2.src" [viewMode]="isPCView"></app-slot-image>
+            <app-slot-image [isHidden]="slot3.isHidden" [productImg]="slot3.src" [viewMode]="isPCView"></app-slot-image>
         </div>
         <div>
             <div class="row shoppingCartTabContainer" (click)="OpenFullDetailCart()">

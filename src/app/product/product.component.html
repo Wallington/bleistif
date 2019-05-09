@@ -2,7 +2,7 @@
     
     <div id="ImgContainer" class="column">
         <div class="row" id="actionBar">
-            <button mat-icon-button><i class="fas fa-times"></i></button>
+            <button mat-icon-button (click)="Back()"><i class="fas fa-times"></i></button>
             <div class="fx-auto"></div>
             <button mat-icon-button [matMenuTriggerFor]="quantity"><i class="fas fa-cart-plus"></i></button>
             <button mat-icon-button><i class="far fa-heart"></i></button>

@@ -21,6 +21,7 @@ export class ShoppingCartService
     private cart = [];
     public newItemWasAdd = new BehaviorSubject<Object>({});
     public toggleFullCartPanel = new BehaviorSubject<boolean>(false);
+    public CartBeenEditBehavior = new BehaviorSubject<boolean>(false); 
 
     AddToCart(product: Object)
     {
@@ -42,4 +43,8 @@ export class ShoppingCartService
         return this.cart;
     }
 
+    CartHasBeenEdit()
+    {
+        this.CartBeenEditBehavior.next(true);
+    }
 }

@@ -1,0 +1,29 @@
+<div class="skirt" [ngClass]="skirtClass">
+    <div id="signin" [ngClass]="signInClass">
+        <button mat-icon-button><i class="fas fa-angle-left"></i></button>
+        <div class="column">
+            <svg></svg>
+            <h1>Bleistift</h1>
+            <form class="column" style="width: 100%">
+                <mat-form-field color="accent">
+                    <mat-label>
+                        Email Address
+                    </mat-label>
+                    <input matInput type="email" placeholder="Email Address">
+                </mat-form-field>
+                <mat-form-field color="accent">
+                        <mat-label>
+                            Password
+                        </mat-label>
+                        <input matInput [type]="passwordType" placeholder="Password">
+                        <i matSuffix [ngClass]="passwordIconClass" (click)="TogglePassword()" matTooltip="Toggle password visibility"></i>
+                </mat-form-field>
+                <div class="row ">
+                    <button mat-button>Forgot Password? </button>
+                    <button class="fx-auto" mat-raised-button color="accent">Log In</button>
+                </div>
+                <button mat-button>Create Account</button>
+            </form>
+        </div>
+    </div>
+</div>

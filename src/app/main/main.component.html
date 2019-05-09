@@ -11,8 +11,11 @@
     </mat-toolbar>
     <mat-nav-list id="nav">
         <mat-list-item *ngFor="let nav of navList; let i = index"  [routerLinkActive]="['active']" >
-            <mat-divider *ngIf="i == 5"></mat-divider>
             <a matLine [routerLink]="nav.link">{{nav.name}}</a>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+            <a matLine>Sign In</a>
         </mat-list-item>
     </mat-nav-list>
 </section>
@@ -27,6 +30,8 @@
                 <a mat-tab-link *ngFor="let nav of navList" [routerLink]="nav.link" routerLinkActive  #rla="routerLinkActive" [active]="rla.isActive">
                     {{nav.name}}
                 </a>
+                <mat-divider [vertical]="true"></mat-divider>
+                <a mat-tab-link>Sign In</a>
             </nav>
         </mat-toolbar-row>
     </mat-toolbar>
@@ -44,8 +49,12 @@
            <div class="column">
                 <mat-nav-list>
                     <mat-list-item *ngFor="let nav of navList; let i = index"  [routerLinkActive]="['active']" >
-                        <mat-divider *ngIf="i == 5"></mat-divider>
+                       
                         <a matLine [routerLink]="nav.link">{{nav.name}}</a>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <a matLine>Sign In</a>
                     </mat-list-item>
                 </mat-nav-list>
            </div>
@@ -60,3 +69,4 @@
 <app-shoppingCartTab *ngIf="!isPCMode"></app-shoppingCartTab>
 <app-filter></app-filter>
 <app-fullDetailShoppingCart></app-fullDetailShoppingCart>
+<app-signin></app-signin>
