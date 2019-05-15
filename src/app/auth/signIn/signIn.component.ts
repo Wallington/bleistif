@@ -1,6 +1,7 @@
 import
 {
-    Component
+    Component,
+    DoCheck
 } from '@angular/core';
 
 //import AUTH API
@@ -12,7 +13,7 @@ import { AuthService } from '../../api/api.auth';
     templateUrl: './signIn.component.html'
 })
 
-export class SignInComponent
+export class SignInComponent implements DoCheck
 {
     public passwordIconClass: String = 'far fa-eye-slash';
     private isPasswordToggle: Boolean = false;
@@ -26,6 +27,15 @@ export class SignInComponent
         private Service: AuthService
     ){}
     
+    ngDoCheck()
+    {
+        if(this.Service.signInIsOpen.value)
+        {
+            this.Service.signInIsOpen.next(false);
+            this.TogglePanel()
+        }
+    }
+
     TogglePassword()
     {
         this.isPasswordToggle = !this.isPasswordToggle
@@ -34,8 +44,18 @@ export class SignInComponent
 
     }
 
-    ToggleSignIn()
+    TogglePanel()
     {
-
+        this.signInClass = (this.isOpen) ? 'fx-notvisable' : 'fx-visable';
+        this.skirtClass = 'fx-visable';
+        //if isOpen current false we want open it if not we want close it 
+        this.signInClass = (this.isOpen) ? 'closeRightPanel' : 'openRightPanel';
+        this.isOpen = !this.isOpen;
+        setTimeout(() =>
+        {
+            this.signInClass = (this.isOpen) ? 'fx-show' : 'fx-hidden';
+            this.skirtClass = (this.isOpen) ? 'fx-show' : 'fx-hidden';
+        }, (this.isOpen) ? 513 : 348);
     }
+
 }

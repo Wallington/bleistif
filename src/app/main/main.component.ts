@@ -13,6 +13,8 @@ import { Http } from '@angular/http'
 import { RouterOutlet } from '@angular/router';
 import { PageTranstion } from '../animation/pageTransition'; //our custome angular 6 animation
 
+//import API
+import { AuthService } from '../api/api.auth';
 
 @Component
 ({
@@ -26,7 +28,8 @@ export class MainComponent
     //creating varbales from exist other components
     constructor
     (
-      public HTTP: Http
+      public HTTP: Http,
+      private AuthService: AuthService
     ){}
 
     navList = 
@@ -88,6 +91,11 @@ export class MainComponent
     PrepareRoute(outlet: RouterOutlet)
     {
         return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    }
+
+    OpenSignInPanel()
+    {
+       this.AuthService.OpenSignPannel();
     }
 }
 

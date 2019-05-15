@@ -129,7 +129,7 @@ export class FullDetailShoppingCartComponent implements OnInit, DoCheck
         this.cartClass = (this.isOpen) ? 'fx-notvisable' : 'fx-visable';
         this.skirtClass = 'fx-visable';
         //if isOpen current false we want open it if not we want close it 
-        this.cartClass = (this.isOpen) ? 'closeFullCartDetail' : 'openFullCartDetail';
+        this.cartClass = (this.isOpen) ? 'closeLeftPanel' : 'openLeftPanel';
         this.isOpen = !this.isOpen;
         setTimeout(() =>
         {

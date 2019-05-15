@@ -225,7 +225,6 @@ html, body
 **************************************/
 #signin
 {
-    width: 100vw;
     height: 100vh;
     position: absolute;
     background-color: $mainColor;
@@ -273,10 +272,6 @@ html, body
 mat-form-field.mat-form-field
 {
    font-size: 15px;
-}
-input:-internal-autofill-previewed, input:-internal-autofill-selected, textarea:-internal-autofill-previewed, textarea:-internal-autofill-selected, select:-internal-autofill-previewed, select:-internal-autofill-selected 
-{
-    background-color: $mainColor !important;
 }
 
 /**********************************
@@ -360,6 +355,7 @@ mat-basic-chip:active, mat-basic-chip:hover
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 /**********************************
@@ -613,7 +609,12 @@ div#productDiscription > div
     }
 }
 
-@keyframes OpenAuthPC
+/*****************************************
+*
+*   Right Panel KeyFrames
+*
+*****************************************/
+@keyframes OpenRightPanelPC
 {
     from
     {
@@ -621,46 +622,44 @@ div#productDiscription > div
     }
     to
     {
-        right: 73vw;
+        right: 75vw;
     }
-
 }
-@keyframes CloseAuthPC
+@keyframes CloseRightPanelPC
 {
     from
     {
-        right: 73vw;
+        right: 75vw;
     }
     to
     {
         right: 100vw;
         display: none;
     }
-
 }
-@keyframes OpenAuthTablet
+@keyframes OpenRightPanelTablet
 {
     from
     {
-        left: 100vw;
+        right: 100vw;
     }
     to
     {
-        left: 51vw;
+        right: 55vw;
     }
 }
-@keyframes CloseAuthTablet
+@keyframes CloseRightPanelTablet
 {
     from
     {
-        right: 51vw;
+        right: 55vw;
     }
     to
     {
         right: 100vw;
     }
 }
-@keyframes OpenAuthPhone
+@keyframes OpenRightPanelPhone
 {
     from
     {
@@ -671,7 +670,7 @@ div#productDiscription > div
         right: 0vw;
     }
 }
-@keyframes CloseAuthPhone
+@keyframes CloseRightPanelPhone
 {
     from
     {
@@ -683,7 +682,12 @@ div#productDiscription > div
     }
 }
 
-@keyframes OpenFilterPC
+/************************************
+*
+*   Left Panel KeyFrames
+*
+*************************************/
+@keyframes OpenLeftPanelPC
 {
     from
     {
@@ -693,79 +697,8 @@ div#productDiscription > div
     {
         left: 75vw;
     }
-
 }
-@keyframes CloseFilterPC
-{
-    from
-    {
-        left: 75vw;
-    }
-    to
-    {
-        left: 100vw;
-        display: none;
-    }
-
-}
-@keyframes OpenFilterTablet
-{
-    from
-    {
-        left: 100vw;
-    }
-    to
-    {
-        left: 55vw;
-    }
-}
-@keyframes CloseFilterTablet
-{
-    from
-    {
-        left: 55vw;
-    }
-    to
-    {
-        left: 100vw;
-    }
-}
-@keyframes OpenFilterPhone
-{
-    from
-    {
-        left: 100vw;
-    }
-    to
-    {
-        left: 0vw;
-    }
-}
-@keyframes CloseFilterPhone
-{
-    from
-    {
-        left: 0vw;
-    }
-    to
-    {
-        left: 100vw;
-    }
-}
-
-@keyframes OpenFullCartDetailPC
-{
-    from
-    {
-        left: 100vw;
-    }
-    to
-    {
-        left: 75vw;
-    }
-
-}
-@keyframes CloseFullCartDetailPC
+@keyframes CloseLeftPanelPC
 {
     from
     {
@@ -776,52 +709,53 @@ div#productDiscription > div
         left: 100vw;
         display: none;
     }
+}
+@keyframes OpenLeftPanelTablet
+{
+    from
+    {
+        left: 100vw;
+    }
+    to
+    {
+        left: 55vw;
+    }
+}
+@keyframes CloseLeftPanelTablet
+{
+    from
+    {
+        left: 55vw;
+    }
+    to
+    {
+        left: 100vw;
+    }
+}
+@keyframes OpenLeftPanelPhone
+{
+    from
+    {
+        left: 100vw;
+    }
+    to
+    {
+        left: 0vw;
+    }
+}
+@keyframes CloseLeftPanelPhone
+{
+    from
+    {
+        left: 0vw;
+    }
+    to
+    {
+        left: 100vw;
+    }
+}
 
-}
-@keyframes OpenFullCartDetailTablet
-{
-    from
-    {
-        left: 100vw;
-    }
-    to
-    {
-        left: 55vw;
-    }
-}
-@keyframes CloseFullCartDetailTablet
-{
-    from
-    {
-        left: 55vw;
-    }
-    to
-    {
-        left: 100vw;
-    }
-}
-@keyframes OpenFullCartDetailPhone
-{
-    from
-    {
-        left: 100vw;
-    }
-    to
-    {
-        left: 0vw;
-    }
-}
-@keyframes CloseFullCartDetailPhone
-{
-    from
-    {
-        left: 0vw;
-    }
-    to
-    {
-        left: 100vw;
-    }
-}
+
 /*************************************
 *    X-SMALL
 **************************************/
@@ -935,30 +869,29 @@ div#productDiscription > div
     {
         overflow-y: scroll;
     }
-    .openFullCartDetail
+    .openLeftPanel
     {
-        animation-name: OpenFullCartDetailPhone;
+        animation-name: OpenLeftPanelPhone;
         animation-duration: 515ms;
         animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
     }
-    .closeFullCartDetail
+    .closeLeftPanel
     {
-        animation-name: CloseFullCartDetailPhone;
+        animation-name: CloseLeftPanelPhone;
         animation-duration: 350ms;
-        animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+        animation-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
     }
-
-    .openFilter
+    .openRightPanel
     {
-        animation-name: OpenFilterPhone;
+        animation-name: OpenRightPanelPhone;
         animation-duration: 515ms;
         animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
     }
-    .closeFilter
+    .closeRightPanel
     {
-        animation-name: CloseFilterPhone;
+        animation-name: CloseRightPanelPhone;
         animation-duration: 350ms;
-        animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+        animation-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
     }
 }
 
@@ -1085,29 +1018,29 @@ div#productDiscription > div
     {
         overflow-y: scroll;
     }
-    .openFullCartDetail
+    .openLeftPanel
     {
-        animation-name: OpenFullCartDetailPhone;
+        animation-name: OpenLeftPanelPhone;
         animation-duration: 515ms;
         animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
     }
-    .closeFullCartDetail
+    .closeLeftPanel
     {
-        animation-name: OpenFullCartDetailPhone;
+        animation-name: CloseLeftPanelPhone;
         animation-duration: 350ms;
-        animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+        animation-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
     }
-    .openFilter
+    .openRightPanel
     {
-        animation-name: OpenFilterPhone;
+        animation-name: OpenRightPanelPhone;
         animation-duration: 515ms;
         animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
     }
-    .closeFilter
+    .closeRightPanel
     {
-        animation-name: OpenFilterPhone;
+        animation-name: CloseRightPanelPhone;
         animation-duration: 350ms;
-        animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+        animation-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
     }
 }
 
@@ -1214,7 +1147,7 @@ div#productDiscription > div
     #filter
     {
         left: 55vw;
-        width: 45vw !important;
+        width: 45vw;
     }
     
 
@@ -1222,6 +1155,11 @@ div#productDiscription > div
     {
         left: 55vw;
         width: 45vw;
+    }
+    #signin
+    {
+        right: 55vw;
+        width: 41.5vw;
     }
     .skirt
     {
@@ -1231,36 +1169,32 @@ div#productDiscription > div
         height: 100vh;
         background-color: rgba(0, 0, 0, .56);
     }
-    .openFullCartDetail
+    .openLeftPanel
     {
-        animation-name: OpenFullCartDetailTablet;
+        animation-name: OpenLeftPanelTablet;
         animation-duration: 515ms;
         animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
     }
-    .closeFullCartDetail
+    .closeLeftPanel
     {
-        animation-name: CloseFullCartDetailTablet;
+        animation-name: CloseLeftPanelTablet;
         animation-duration: 350ms;
-        animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+        animation-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
     }
-    .openFilter
+    .openRightPanel
     {
-        animation-name: OpenFullCartDetailTablet;
+        animation-name: OpenRightPanelTablet;
         animation-duration: 515ms;
         animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
     }
-    .closeFilter
+    .closeRightPanel
     {
-        animation-name: CloseFullCartDetailTablet;
+        animation-name: CloseRightPanelTablet;
         animation-duration: 350ms;
-        animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+        animation-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
     }
 
-    #signin
-    {
-        width: 45vw;
-        right:  51vw;
-    }
+    
     
 
 }
@@ -1402,13 +1336,18 @@ div#productDiscription > div
     #filter
     {
         left: 75vw;
-        width: 25vw !important;
+        width: 25vw;
     }
 
     #fullDetailShoppingCart
     {
         left:  75vw;
         width: 25vw;
+    }
+    #signin
+    {
+        right:  75vw;
+        width: 23vw;
     }
     .skirt
     {
@@ -1419,39 +1358,30 @@ div#productDiscription > div
         background-color: rgba(0, 0, 0, .56);
     }
 
-    .openFullCartDetail
+    .openLeftPanel
     {
-        
-        animation-name: OpenFullCartDetailPC;
+        animation-name: OpenLeftPanelPC;
         animation-duration: 515ms;
         animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
     }
-    .closeFullCartDetail
+    .closeLeftPanel
     {
-        
-        animation-name: CloseFullCartDetailPC;
+        animation-name: CloseLeftPanelPC;
         animation-duration: 350ms;
-        animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+        animation-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
     }
-    .openFilter
+    .openRightPanel
     {
-        
-        animation-name: OpenFullCartDetailPC;
+        animation-name: OpenRightPanelPC;
         animation-duration: 515ms;
         animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
     }
-    .closeFilter
+    .closeRightPanel
     {
-        
-        animation-name: CloseFullCartDetailPC;
+        animation-name: CloseRightPanelPC;
         animation-duration: 350ms;
-        animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+        animation-timing-function: cubic-bezier(0.4, 0.0, 1, 1);
     }
-
-    #signin
-    {
-        width: 25vw;
-        right:  73vw;
-    }
+    
 
 }

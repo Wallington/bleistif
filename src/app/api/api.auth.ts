@@ -11,4 +11,9 @@ import { BehaviorSubject } from 'rxjs';
 export class AuthService
 {
     public signInIsOpen = new BehaviorSubject<Boolean>(false);
+
+    public OpenSignPannel()
+    {
+        this.signInIsOpen.next(true);
+    }
 }

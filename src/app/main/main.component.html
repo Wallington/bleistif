@@ -15,7 +15,7 @@
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-            <a matLine>Sign In</a>
+            <a matLine (click)="OpenSignInPanel()">Sign In</a>
         </mat-list-item>
     </mat-nav-list>
 </section>
@@ -31,7 +31,7 @@
                     {{nav.name}}
                 </a>
                 <mat-divider [vertical]="true"></mat-divider>
-                <a mat-tab-link>Sign In</a>
+                <a mat-tab-link (click)="OpenSignInPanel()">Sign In</a>
             </nav>
         </mat-toolbar-row>
     </mat-toolbar>
@@ -54,7 +54,7 @@
                     </mat-list-item>
                     <mat-divider></mat-divider>
                     <mat-list-item>
-                        <a matLine>Sign In</a>
+                        <a matLine (click)="OpenSignInPanel()">Sign In / Sign Up</a>
                     </mat-list-item>
                 </mat-nav-list>
            </div>

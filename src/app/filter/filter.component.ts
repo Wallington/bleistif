@@ -55,7 +55,7 @@ export class FilterComponent implements OnInit, DoCheck
         this.filterClass = (this.isOpen) ? 'fx-notvisable' : 'fx-visable';
         this.skirtClass = 'fx-visable';
         //if isOpen current false we want open it if not we want close it 
-        this.filterClass = (this.isOpen) ? 'closeFilter' : 'openFilter';
+        this.filterClass = (this.isOpen) ? 'closeLeftPanel' : 'openLeftPanel';
         this.isOpen = !this.isOpen;
         setTimeout(() =>
         {
